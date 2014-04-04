@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.taoeaten</groupId>
+  <artifactId>et-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  
+ 	 <modules>
+		<module>../et-core</module>
+		<module>../et-server</module>
+		<module>../et-client</module>
+	</modules>
+	
+	<properties>
+		<et.version>0.0.1-SNAPSHOT</et.version>
+	</properties>
+
+	<!-- 预定义依赖项的version,scope与exclusions,子项目中只需定义groupId 和 artifactId 即可 -->
+	<dependencyManagement>
+		<dependencies>
+		</dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty</artifactId>
+			<version>3.9.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+	</dependencies>
+	
+	
+	<!--设定插件仓库 -->
+	<pluginRepositories>
+		<pluginRepository>
+			<id>public</id>
+			<url>http://10.233.94.62:8081/nexus/content/repositories/public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<!--设定依赖仓库 -->
+	<repositories>
+		<repository>
+			<id>public</id>
+			<url>http://10.233.94.62:8081/nexus/content/repositories/public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>
