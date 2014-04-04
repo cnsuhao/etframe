@@ -1,4 +1,4 @@
-package com.taoeaten.et.client.main;
+package com.taotean.et.client.test;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
@@ -17,7 +17,7 @@ import com.taoeaten.et.client.GameClient;
 import com.taoeaten.et.client.handler.GameHandler;
 import com.taoeaten.et.core.domain.Command;
 
-public class Main {
+public class ClientTest {
 	public static void main(String[] args) {
 		/**
 		 * et part
@@ -44,5 +44,13 @@ public class Main {
 		bootstrap.setOption("tcpNoDelay", true);
 		bootstrap.setOption("keepAlive", true);
 		bootstrap.connect(new InetSocketAddress("localhost", 8080));
+		
+		/**
+		 * Test
+		 */
+		//login
+		client.login();
+		//logout
+		client.logout();
 	}
 }

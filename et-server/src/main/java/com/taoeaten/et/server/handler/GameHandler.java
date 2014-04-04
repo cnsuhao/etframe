@@ -11,6 +11,7 @@ import org.jboss.netty.channel.Channel;
 import org.jboss.netty.channel.ChannelHandler.Sharable;
 import org.jboss.netty.channel.ChannelHandlerContext;
 import org.jboss.netty.channel.ChannelStateEvent;
+import org.jboss.netty.channel.ChildChannelStateEvent;
 import org.jboss.netty.channel.ExceptionEvent;
 import org.jboss.netty.channel.MessageEvent;
 import org.jboss.netty.channel.SimpleChannelHandler;
@@ -62,5 +63,27 @@ public class GameHandler extends SimpleChannelHandler{
 		this.channels.put(e.getChannel().getRemoteAddress().toString(), e.getChannel());
 		this.logger.info("connected from " + ctx.getChannel().getRemoteAddress() + " add channels success. now size:"+ channels.size());
 	}
+
+	@Override
+	public void channelDisconnected(ChannelHandlerContext ctx,
+			ChannelStateEvent e) throws Exception {
+		this.logger.info("channel disconnect");
+	}
+
+	@Override
+	public void channelClosed(ChannelHandlerContext ctx, ChannelStateEvent e)
+			throws Exception {
+		// TODO Auto-generated method stub
+		super.channelClosed(ctx, e);
+	}
+
+	@Override
+	public void childChannelClosed(ChannelHandlerContext ctx,
+			ChildChannelStateEvent e) throws Exception {
+		// TODO Auto-generated method stub
+		super.childChannelClosed(ctx, e);
+	}
+	
+	
 	
 }
