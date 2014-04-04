@@ -1,0 +1,9 @@
+package com.taoeaten.et.protobuf;
+
+option java_package = "com.taoeaten.et.protobuf";  
+option java_outer_classname = "CommandProtobuf";  
+
+message cmdInfo  {  
+	required int32 cmdNo = 1;  
+	required string cmdContent = 3;  
+}  

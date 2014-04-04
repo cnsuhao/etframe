@@ -5,6 +5,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.jboss.netty.channel.Channel;
+import org.jboss.netty.channel.ChannelFuture;
+import org.jboss.netty.channel.ChannelFutureListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,7 +45,12 @@ public class GameClient {
 		Command logOutCmd = new Command();
 		logOutCmd.setCmdNo(CommandConstant.CMD_LOGOUT);
 		logOutCmd.setCmdContent("taoeaten logout");
-		this.channels.get("login").write(logOutCmd);
+		ChannelFuture future = this.channels.get("login").write(logOutCmd);
+		future.addListener(new ChannelFutureListener() {
+			public void operationComplete(ChannelFuture future) throws Exception {
+				GameClient.this.channels.remove("login");
+			}
+		});
 		return 0;
 	}
 	
