@@ -19,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.taoeaten.et.core.domain.Command;
+import com.taoeaten.et.protobuf.CommandProtobuf.cmdInfo;
 
 /**
  * GameHandler for Server
@@ -42,7 +43,17 @@ public class GameHandler extends SimpleChannelHandler{
 	@Override
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 			throws Exception {
-		Command cmd = (Command) e.getMessage();
+		/**
+		 * object 
+		 */
+//		Command cmd = (Command) e.getMessage();
+//		this.logger.info("message received - " + cmd.toString());
+//		e.getChannel().write(cmd);
+		
+		/**
+		 * protobuf 
+		 */
+		cmdInfo cmd = (cmdInfo) e.getMessage();
 		this.logger.info("message received - " + cmd.toString());
 		e.getChannel().write(cmd);
 //		ChannelBuffer buffer = (ChannelBuffer) e.getMessage();

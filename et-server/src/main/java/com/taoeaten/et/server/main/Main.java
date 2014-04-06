@@ -10,6 +10,10 @@ import org.jboss.netty.channel.ChannelPipeline;
 import org.jboss.netty.channel.ChannelPipelineFactory;
 import org.jboss.netty.channel.Channels;
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
+import org.jboss.netty.handler.codec.protobuf.ProtobufDecoder;
+import org.jboss.netty.handler.codec.protobuf.ProtobufEncoder;
+import org.jboss.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
+import org.jboss.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import org.jboss.netty.handler.codec.serialization.ClassResolvers;
 import org.jboss.netty.handler.codec.serialization.ObjectDecoder;
 import org.jboss.netty.handler.codec.serialization.ObjectEncoder;
@@ -17,6 +21,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.taoeaten.et.core.domain.Command;
+import com.taoeaten.et.protobuf.CommandProtobuf;
 import com.taoeaten.et.server.handler.GameHandler;
 
 public class Main {
@@ -34,8 +39,25 @@ public class Main {
 		bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
 			public ChannelPipeline getPipeline() throws Exception {
 				ChannelPipeline pipeline = Channels.pipeline();
-				pipeline.addLast("encode", new ObjectEncoder());  
-                pipeline.addLast("decode", new ObjectDecoder(ClassResolvers.cacheDisabled(Command.class.getClassLoader()))); 
+				/**
+				 * object codec
+				 */
+//				pipeline.addLast("encode", new ObjectEncoder());  
+//                pipeline.addLast("decode", new ObjectDecoder(ClassResolvers.cacheDisabled(Command.class.getClassLoader()))); 
+                
+                /**
+				 * protobuf codec
+				 */
+				pipeline.addLast("frameDecoder", new ProtobufVarint32FrameDecoder());  
+		        //构造函数传递要解码成的类型  
+				pipeline.addLast("protobufDecoder", new ProtobufDecoder(CommandProtobuf.cmdInfo.getDefaultInstance()));  
+		 //编码用  
+				pipeline.addLast("frameEncoder", new ProtobufVarint32LengthFieldPrepender());  
+				pipeline.addLast("protobufEncoder", new ProtobufEncoder());  
+                
+                /**
+                 * business handler
+                 */
                 pipeline.addLast("game", handler);
 				return pipeline;
 			}

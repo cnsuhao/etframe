@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import com.taoeaten.et.client.constant.CommandConstant;
 import com.taoeaten.et.core.domain.Command;
+import com.taoeaten.et.protobuf.CommandProtobuf;
 
 
 /**
@@ -30,10 +31,17 @@ public class GameClient {
 		if(!this.channels.containsKey("login")){
 			return -1;
 		}
-		Command loginCmd = new Command();
-		loginCmd.setCmdNo(CommandConstant.CMD_LOGIN);
-		loginCmd.setCmdContent("taoeaten login");
-		this.channels.get("login").write(loginCmd);
+//		Command loginCmd = new Command();
+//		loginCmd.setCmdNo(CommandConstant.CMD_LOGIN);
+//		loginCmd.setCmdContent("taoeaten login");
+//		this.channels.get("login").write(loginCmd);
+		/**
+		 * protobuf command
+		 */
+		CommandProtobuf.cmdInfo.Builder builder = CommandProtobuf.cmdInfo.newBuilder();
+		builder.setCmdNo(CommandConstant.CMD_LOGIN);
+		builder.setCmdContent("taoeaten login");
+		this.channels.get("login").write(builder.build());
 		return 0;
 	}
 	
@@ -42,10 +50,22 @@ public class GameClient {
 		if(!this.channels.containsKey("login")){
 			return -1;
 		}
-		Command logOutCmd = new Command();
-		logOutCmd.setCmdNo(CommandConstant.CMD_LOGOUT);
-		logOutCmd.setCmdContent("taoeaten logout");
-		ChannelFuture future = this.channels.get("login").write(logOutCmd);
+		/**
+		 * object command
+		 */
+//		Command logOutCmd = new Command();
+//		logOutCmd.setCmdNo(CommandConstant.CMD_LOGOUT);
+//		logOutCmd.setCmdContent("taoeaten logout");
+//		ChannelFuture future = this.channels.get("login").write(logOutCmd);
+		
+		/**
+		 * protobuf command
+		 */
+		CommandProtobuf.cmdInfo.Builder builder = CommandProtobuf.cmdInfo.newBuilder();
+		builder.setCmdNo(CommandConstant.CMD_LOGOUT);
+		builder.setCmdContent("taoeaten logout");
+		this.channels.get("login").write(builder.build());
+		ChannelFuture future = this.channels.get("login").write(builder.build());
 		future.addListener(new ChannelFutureListener() {
 			public void operationComplete(ChannelFuture future) throws Exception {
 				GameClient.this.channels.remove("login");
