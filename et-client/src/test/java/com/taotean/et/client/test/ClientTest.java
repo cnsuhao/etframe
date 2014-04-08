@@ -1,6 +1,5 @@
 package com.taotean.et.client.test;
 
-import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.Scanner;
 import java.util.concurrent.Executors;
@@ -15,13 +14,9 @@ import org.jboss.netty.handler.codec.protobuf.ProtobufDecoder;
 import org.jboss.netty.handler.codec.protobuf.ProtobufEncoder;
 import org.jboss.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import org.jboss.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
-import org.jboss.netty.handler.codec.serialization.ClassResolvers;
-import org.jboss.netty.handler.codec.serialization.ObjectDecoder;
-import org.jboss.netty.handler.codec.serialization.ObjectEncoder;
 
 import com.taoeaten.et.client.GameClient;
 import com.taoeaten.et.client.handler.GameHandler;
-import com.taoeaten.et.core.domain.Command;
 import com.taoeaten.et.protobuf.CommandProtobuf;
 
 public class ClientTest {

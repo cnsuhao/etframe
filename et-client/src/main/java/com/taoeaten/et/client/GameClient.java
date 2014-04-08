@@ -11,7 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.taoeaten.et.client.constant.CommandConstant;
-import com.taoeaten.et.core.domain.Command;
 import com.taoeaten.et.protobuf.CommandProtobuf;
 
 
