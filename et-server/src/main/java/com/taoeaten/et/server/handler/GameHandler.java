@@ -3,6 +3,8 @@ package com.taoeaten.et.server.handler;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.jboss.netty.channel.Channel;
 import org.jboss.netty.channel.ChannelHandler.Sharable;
@@ -15,6 +17,7 @@ import org.jboss.netty.channel.SimpleChannelHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.taoeaten.et.core.domain.CommandConstant;
 import com.taoeaten.et.protobuf.CommandProtobuf.cmdInfo;
 import com.taoeaten.et.server.business.GameWorker;
 
@@ -31,6 +34,8 @@ public class GameHandler extends SimpleChannelHandler{
 	
 	private Map<String, Channel> channels = new ConcurrentHashMap<String, Channel>();
 	
+	private ExecutorService executors = Executors.newFixedThreadPool(CommandConstant.THREADPOOL_SIZE);
+	
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, ExceptionEvent e)
 			throws Exception {
@@ -46,7 +51,7 @@ public class GameHandler extends SimpleChannelHandler{
 		cmdInfo cmd = (cmdInfo) e.getMessage();
 		this.logger.info("message received - " + cmd.toString());
 		GameWorker worker = new GameWorker(e.getChannel(), cmd);
-		worker.start();
+		this.executors.execute(worker);
 	}
 
 	
@@ -68,14 +73,12 @@ public class GameHandler extends SimpleChannelHandler{
 	@Override
 	public void channelClosed(ChannelHandlerContext ctx, ChannelStateEvent e)
 			throws Exception {
-		// TODO Auto-generated method stub
 		super.channelClosed(ctx, e);
 	}
 
 	@Override
 	public void childChannelClosed(ChannelHandlerContext ctx,
 			ChildChannelStateEvent e) throws Exception {
-		// TODO Auto-generated method stub
 		super.childChannelClosed(ctx, e);
 	}
 	

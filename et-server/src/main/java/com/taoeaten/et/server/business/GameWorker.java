@@ -11,7 +11,7 @@ import com.taoeaten.et.protobuf.CommandProtobuf.cmdInfo;
  * @author taoeaten
  *
  */
-public class GameWorker extends Thread{
+public class GameWorker implements Runnable{
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
@@ -40,7 +40,6 @@ public class GameWorker extends Thread{
 		this.command = command;
 	}
 
-	@Override
 	public void run() {
 		this.logger.info("work!work!work!");
 		switch (this.command.getCmdNo()) {

@@ -1,4 +1,4 @@
-package com.taoeaten.et.client.constant;
+package com.taoeaten.et.core.domain;
 
 /**
  * Command Constant
@@ -9,4 +9,6 @@ package com.taoeaten.et.client.constant;
 public class CommandConstant {
 	public static int CMD_LOGIN = 0;
 	public static int CMD_LOGOUT = 1;
+	
+	public static int THREADPOOL_SIZE=10;
 }
