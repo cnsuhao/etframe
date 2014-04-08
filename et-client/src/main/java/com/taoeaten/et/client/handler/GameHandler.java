@@ -39,12 +39,6 @@ public class GameHandler extends SimpleChannelHandler{
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 			throws Exception {
 		/**
-		 * object
-		 */
-//		Command cmd = (Command) e.getMessage();
-//		this.logger.info("message received - " + cmd.toString());
-		
-		/**
 		 * protobuf
 		 */
 		cmdInfo cmd = (cmdInfo) e.getMessage();

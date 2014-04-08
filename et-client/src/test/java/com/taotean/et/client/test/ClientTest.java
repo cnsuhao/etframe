@@ -37,19 +37,12 @@ public class ClientTest {
 		bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
 			public ChannelPipeline getPipeline() throws Exception {
 				ChannelPipeline pipeline = Channels.pipeline();
-				/**
-				 * object codec
-				 */
-//				pipeline.addLast("encode", new ObjectEncoder());  
-//                pipeline.addLast("decode", new ObjectDecoder(ClassResolvers.cacheDisabled(Command.class.getClassLoader())));
 				
 				/**
 				 * protobuf codec
 				 */
 				pipeline.addLast("frameDecoder", new ProtobufVarint32FrameDecoder());  
-		        //构造函数传递要解码成的类型  
 				pipeline.addLast("protobufDecoder", new ProtobufDecoder(CommandProtobuf.cmdInfo.getDefaultInstance()));  
-		 //编码用  
 				pipeline.addLast("frameEncoder", new ProtobufVarint32LengthFieldPrepender());  
 				pipeline.addLast("protobufEncoder", new ProtobufEncoder());  
 		        
@@ -72,7 +65,7 @@ public class ClientTest {
 		while(true){
 			System.out.println("input cmdNo:");
 			int cmdNo = sc.nextInt();
-			if(cmdNo == 1){
+			if(cmdNo == 0){
 				client.login();
 			}else{
 				client.logout();

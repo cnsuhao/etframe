@@ -30,10 +30,7 @@ public class GameClient {
 		if(!this.channels.containsKey("login")){
 			return -1;
 		}
-//		Command loginCmd = new Command();
-//		loginCmd.setCmdNo(CommandConstant.CMD_LOGIN);
-//		loginCmd.setCmdContent("taoeaten login");
-//		this.channels.get("login").write(loginCmd);
+		
 		/**
 		 * protobuf command
 		 */
@@ -49,13 +46,6 @@ public class GameClient {
 		if(!this.channels.containsKey("login")){
 			return -1;
 		}
-		/**
-		 * object command
-		 */
-//		Command logOutCmd = new Command();
-//		logOutCmd.setCmdNo(CommandConstant.CMD_LOGOUT);
-//		logOutCmd.setCmdContent("taoeaten logout");
-//		ChannelFuture future = this.channels.get("login").write(logOutCmd);
 		
 		/**
 		 * protobuf command
@@ -63,7 +53,6 @@ public class GameClient {
 		CommandProtobuf.cmdInfo.Builder builder = CommandProtobuf.cmdInfo.newBuilder();
 		builder.setCmdNo(CommandConstant.CMD_LOGOUT);
 		builder.setCmdContent("taoeaten logout");
-		this.channels.get("login").write(builder.build());
 		ChannelFuture future = this.channels.get("login").write(builder.build());
 		future.addListener(new ChannelFutureListener() {
 			public void operationComplete(ChannelFuture future) throws Exception {

@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.taoeaten.et.protobuf.CommandProtobuf.cmdInfo;
+import com.taoeaten.et.server.business.GameWorker;
 
 /**
  * GameHandler for Server
@@ -40,25 +41,12 @@ public class GameHandler extends SimpleChannelHandler{
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 			throws Exception {
 		/**
-		 * object 
-		 */
-//		Command cmd = (Command) e.getMessage();
-//		this.logger.info("message received - " + cmd.toString());
-//		e.getChannel().write(cmd);
-		
-		/**
 		 * protobuf 
 		 */
 		cmdInfo cmd = (cmdInfo) e.getMessage();
 		this.logger.info("message received - " + cmd.toString());
-		e.getChannel().write(cmd);
-//		ChannelBuffer buffer = (ChannelBuffer) e.getMessage();
-//		this.logger.info("message received :"+ buffer.toString(Charset.defaultCharset()));
-//		Channel channel =  e.getChannel();
-//		String address = "I am ("+e.getChannel().getRemoteAddress().toString() +")";
-//		ChannelBuffer cb = ChannelBuffers.buffer(address.length());
-//		cb.writeBytes(address.getBytes());
-//		channel.write(cb);
+		GameWorker worker = new GameWorker(e.getChannel(), cmd);
+		worker.start();
 	}
 
 	
