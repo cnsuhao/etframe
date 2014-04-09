@@ -1,6 +1,8 @@
 package com.taoeaten.et.client;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -34,9 +36,9 @@ public class GameClient {
 		/**
 		 * protobuf command
 		 */
-		CommandProtobuf.cmdInfo.Builder builder = CommandProtobuf.cmdInfo.newBuilder();
+		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
 		builder.setCmdNo(CommandConstant.CMD_LOGIN);
-		builder.setCmdContent("taoeaten login");
+		builder.setUserName("taoeaten");
 		this.channels.get("login").write(builder.build());
 		return 0;
 	}
@@ -50,15 +52,62 @@ public class GameClient {
 		/**
 		 * protobuf command
 		 */
-		CommandProtobuf.cmdInfo.Builder builder = CommandProtobuf.cmdInfo.newBuilder();
+		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
 		builder.setCmdNo(CommandConstant.CMD_LOGOUT);
-		builder.setCmdContent("taoeaten logout");
+		builder.setUserName("taoeaten");
 		ChannelFuture future = this.channels.get("login").write(builder.build());
 		future.addListener(new ChannelFutureListener() {
 			public void operationComplete(ChannelFuture future) throws Exception {
 				GameClient.this.channels.remove("login");
 			}
 		});
+		return 0;
+	}
+	
+	public int joinRoom(int roomNo){
+		if(!this.channels.containsKey("login")){
+			return -1;
+		}
+		
+		/**
+		 * protobuf command
+		 */
+		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
+		builder.setCmdNo(CommandConstant.CMD_JOINROOM);
+		builder.setUserName("taoeaten");
+		builder.setRoomNo(roomNo);
+		this.channels.get("login").write(builder.build());
+		return 0;
+	}
+	
+	public int leaveRoom(int roomNo){
+		if(!this.channels.containsKey("login")){
+			return -1;
+		}
+		
+		/**
+		 * protobuf command
+		 */
+		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
+		builder.setCmdNo(CommandConstant.CMD_LEAVEROOM);
+		builder.setUserName("taoeaten");
+		builder.setRoomNo(roomNo);
+		this.channels.get("login").write(builder.build());
+		return 0;
+	}
+	
+	public int getRoomList(){
+		if(!this.channels.containsKey("login")){
+			return -1;
+		}
+		
+		/**
+		 * protobuf command
+		 */
+		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
+		builder.setCmdNo(CommandConstant.CMD_ROOMLIST);
+		builder.setUserName("taoeaten");
+		this.channels.get("login").write(builder.build());
 		return 0;
 	}
 	

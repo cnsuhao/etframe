@@ -22,9 +22,13 @@ import com.taoeaten.et.server.handler.GameHandler;
 
 public class Main {
 	private static Logger logger = LoggerFactory.getLogger(Main.class);
-	private static int PORT = 8080;
+	private static int LOGIC_PORT = 8080;
+	private static int CHAT_PORT = 8088;
 
 	public static void main(String[] args) {
+		/**
+		 * logic server
+		 */
 		logger.info("start the game server");
 		ChannelFactory factory = new NioServerSocketChannelFactory(
 				Executors.newCachedThreadPool(),
@@ -40,7 +44,7 @@ public class Main {
 				 * protobuf codec
 				 */
 				pipeline.addLast("frameDecoder", new ProtobufVarint32FrameDecoder());  
-				pipeline.addLast("protobufDecoder", new ProtobufDecoder(CommandProtobuf.cmdInfo.getDefaultInstance()));  
+				pipeline.addLast("protobufDecoder", new ProtobufDecoder(CommandProtobuf.Command.getDefaultInstance()));  
 				pipeline.addLast("frameEncoder", new ProtobufVarint32LengthFieldPrepender());  
 				pipeline.addLast("protobufEncoder", new ProtobufEncoder());  
                 
@@ -53,7 +57,11 @@ public class Main {
 		});
 		bootstrap.setOption("child.tcpNoDelay", true);
 		bootstrap.setOption("child.keepAlive", true);
-		 bootstrap.bind(new InetSocketAddress(PORT));
-		logger.info("game server started at localhost:" + PORT );
+		 bootstrap.bind(new InetSocketAddress(LOGIC_PORT));
+		logger.info("game server started at localhost:" + LOGIC_PORT );
+		
+		/**
+		 * chat server
+		 */
 	}
 }

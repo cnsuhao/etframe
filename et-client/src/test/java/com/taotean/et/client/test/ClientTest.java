@@ -42,7 +42,7 @@ public class ClientTest {
 				 * protobuf codec
 				 */
 				pipeline.addLast("frameDecoder", new ProtobufVarint32FrameDecoder());  
-				pipeline.addLast("protobufDecoder", new ProtobufDecoder(CommandProtobuf.cmdInfo.getDefaultInstance()));  
+				pipeline.addLast("protobufDecoder", new ProtobufDecoder(CommandProtobuf.Command.getDefaultInstance()));  
 				pipeline.addLast("frameEncoder", new ProtobufVarint32LengthFieldPrepender());  
 				pipeline.addLast("protobufEncoder", new ProtobufEncoder());  
 		        
@@ -67,9 +67,19 @@ public class ClientTest {
 			int cmdNo = sc.nextInt();
 			if(cmdNo == 0){
 				client.login();
-			}else{
+			}else if(cmdNo==1){
 				client.logout();
 				break;
+			}else if(cmdNo == 2){
+				client.getRoomList();
+			}else if(cmdNo == 3){
+				System.out.println("input roomNo:");
+				int roomNo = sc.nextInt();
+				client.joinRoom(roomNo);
+			}else if(cmdNo == 4){
+				System.out.println("input roomNo:");
+				int roomNo = sc.nextInt();
+				client.leaveRoom(roomNo);
 			}
 		}
 		

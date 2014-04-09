@@ -1,6 +1,9 @@
 package com.taoeaten.et.client.handler;
 
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import org.jboss.netty.channel.ChannelHandlerContext;
 import org.jboss.netty.channel.ChannelStateEvent;
 import org.jboss.netty.channel.MessageEvent;
@@ -9,7 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.taoeaten.et.client.GameClient;
-import com.taoeaten.et.protobuf.CommandProtobuf.cmdInfo;
+import com.taoeaten.et.client.business.ClientWorker;
+import com.taoeaten.et.protobuf.CommandProtobuf.Command;
 
 
 
@@ -19,8 +23,11 @@ import com.taoeaten.et.protobuf.CommandProtobuf.cmdInfo;
  *
  */
 public class GameHandler extends SimpleChannelHandler{
+	private static final int THREADPOOL_SIZE = 10;
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	private ExecutorService executors = Executors.newFixedThreadPool(THREADPOOL_SIZE);
 	
 	private GameClient client = null;
 	
@@ -41,9 +48,10 @@ public class GameHandler extends SimpleChannelHandler{
 		/**
 		 * protobuf
 		 */
-		cmdInfo cmd = (cmdInfo) e.getMessage();
+		Command cmd = (Command) e.getMessage();
 		this.logger.info("message received - " + cmd.toString());
-		
+		ClientWorker worker = new ClientWorker(e.getChannel(), cmd);
+		executors.execute(worker);
 	}
 
 }

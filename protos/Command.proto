@@ -1,0 +1,16 @@
+package com.taoeaten.et.protobuf;
+
+option java_package = "com.taoeaten.et.protobuf";  
+option java_outer_classname = "CommandProtobuf";  
+
+message Command{  
+	required int32 cmdNo = 1;
+	required string userName = 2;
+	optional int32 roomNo = 3;
+	optional int32 userReady = 4;
+	repeated Room rooms = 5;
+} 
+
+ message Room{
+     required int32 roomId = 1;
+}

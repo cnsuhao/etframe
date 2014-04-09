@@ -18,7 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.taoeaten.et.core.domain.CommandConstant;
-import com.taoeaten.et.protobuf.CommandProtobuf.cmdInfo;
+import com.taoeaten.et.protobuf.CommandProtobuf.Command;
 import com.taoeaten.et.server.business.GameWorker;
 
 /**
@@ -48,13 +48,11 @@ public class GameHandler extends SimpleChannelHandler{
 		/**
 		 * protobuf 
 		 */
-		cmdInfo cmd = (cmdInfo) e.getMessage();
+		Command cmd = (Command) e.getMessage();
 		this.logger.info("message received - " + cmd.toString());
 		GameWorker worker = new GameWorker(e.getChannel(), cmd);
 		this.executors.execute(worker);
 	}
-
-	
 
 	@Override
 	public void channelConnected(ChannelHandlerContext ctx, ChannelStateEvent e)
