@@ -8,98 +8,629 @@ public final class CommandProtobuf {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface CommandOrBuilder
+  /**
+   * Protobuf enum {@code com.taoeaten.et.protobuf.PlayerStatus}
+   *
+   * <pre>
+   **
+   * domain
+   * </pre>
+   */
+  public enum PlayerStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>OFFLINE = 1;</code>
+     */
+    OFFLINE(0, 1),
+    /**
+     * <code>ONLINE = 2;</code>
+     */
+    ONLINE(1, 2),
+    /**
+     * <code>INROOM = 3;</code>
+     */
+    INROOM(2, 3),
+    /**
+     * <code>PLAYING = 4;</code>
+     */
+    PLAYING(3, 4),
+    ;
+
+    /**
+     * <code>OFFLINE = 1;</code>
+     */
+    public static final int OFFLINE_VALUE = 1;
+    /**
+     * <code>ONLINE = 2;</code>
+     */
+    public static final int ONLINE_VALUE = 2;
+    /**
+     * <code>INROOM = 3;</code>
+     */
+    public static final int INROOM_VALUE = 3;
+    /**
+     * <code>PLAYING = 4;</code>
+     */
+    public static final int PLAYING_VALUE = 4;
+
+
+    public final int getNumber() { return value; }
+
+    public static PlayerStatus valueOf(int value) {
+      switch (value) {
+        case 1: return OFFLINE;
+        case 2: return ONLINE;
+        case 3: return INROOM;
+        case 4: return PLAYING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PlayerStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<PlayerStatus>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PlayerStatus>() {
+            public PlayerStatus findValueByNumber(int number) {
+              return PlayerStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PlayerStatus[] VALUES = values();
+
+    public static PlayerStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private PlayerStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.taoeaten.et.protobuf.PlayerStatus)
+  }
+
+  /**
+   * Protobuf enum {@code com.taoeaten.et.protobuf.RoomStatus}
+   */
+  public enum RoomStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>WAIT = 1;</code>
+     */
+    WAIT(0, 1),
+    /**
+     * <code>FULL = 2;</code>
+     */
+    FULL(1, 2),
+    /**
+     * <code>READY = 3;</code>
+     */
+    READY(2, 3),
+    /**
+     * <code>GAMING = 4;</code>
+     */
+    GAMING(3, 4),
+    ;
+
+    /**
+     * <code>WAIT = 1;</code>
+     */
+    public static final int WAIT_VALUE = 1;
+    /**
+     * <code>FULL = 2;</code>
+     */
+    public static final int FULL_VALUE = 2;
+    /**
+     * <code>READY = 3;</code>
+     */
+    public static final int READY_VALUE = 3;
+    /**
+     * <code>GAMING = 4;</code>
+     */
+    public static final int GAMING_VALUE = 4;
+
+
+    public final int getNumber() { return value; }
+
+    public static RoomStatus valueOf(int value) {
+      switch (value) {
+        case 1: return WAIT;
+        case 2: return FULL;
+        case 3: return READY;
+        case 4: return GAMING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RoomStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<RoomStatus>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RoomStatus>() {
+            public RoomStatus findValueByNumber(int number) {
+              return RoomStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final RoomStatus[] VALUES = values();
+
+    public static RoomStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private RoomStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.taoeaten.et.protobuf.RoomStatus)
+  }
+
+  /**
+   * Protobuf enum {@code com.taoeaten.et.protobuf.EtMessageType}
+   *
+   * <pre>
+   **
+   *message type
+   * </pre>
+   */
+  public enum EtMessageType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>Tet1001 = 1;</code>
+     */
+    Tet1001(0, 1),
+    /**
+     * <code>Tet1002 = 2;</code>
+     */
+    Tet1002(1, 2),
+    /**
+     * <code>Tet2001 = 3;</code>
+     */
+    Tet2001(2, 3),
+    /**
+     * <code>Tet3001 = 4;</code>
+     */
+    Tet3001(3, 4),
+    /**
+     * <code>Tet3002 = 5;</code>
+     */
+    Tet3002(4, 5),
+    /**
+     * <code>Tet3003 = 6;</code>
+     */
+    Tet3003(5, 6),
+    /**
+     * <code>Tet3004 = 7;</code>
+     */
+    Tet3004(6, 7),
+    ;
+
+    /**
+     * <code>Tet1001 = 1;</code>
+     */
+    public static final int Tet1001_VALUE = 1;
+    /**
+     * <code>Tet1002 = 2;</code>
+     */
+    public static final int Tet1002_VALUE = 2;
+    /**
+     * <code>Tet2001 = 3;</code>
+     */
+    public static final int Tet2001_VALUE = 3;
+    /**
+     * <code>Tet3001 = 4;</code>
+     */
+    public static final int Tet3001_VALUE = 4;
+    /**
+     * <code>Tet3002 = 5;</code>
+     */
+    public static final int Tet3002_VALUE = 5;
+    /**
+     * <code>Tet3003 = 6;</code>
+     */
+    public static final int Tet3003_VALUE = 6;
+    /**
+     * <code>Tet3004 = 7;</code>
+     */
+    public static final int Tet3004_VALUE = 7;
+
+
+    public final int getNumber() { return value; }
+
+    public static EtMessageType valueOf(int value) {
+      switch (value) {
+        case 1: return Tet1001;
+        case 2: return Tet1002;
+        case 3: return Tet2001;
+        case 4: return Tet3001;
+        case 5: return Tet3002;
+        case 6: return Tet3003;
+        case 7: return Tet3004;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EtMessageType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EtMessageType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EtMessageType>() {
+            public EtMessageType findValueByNumber(int number) {
+              return EtMessageType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final EtMessageType[] VALUES = values();
+
+    public static EtMessageType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EtMessageType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.taoeaten.et.protobuf.EtMessageType)
+  }
+
+  /**
+   * Protobuf enum {@code com.taoeaten.et.protobuf.EtMessageRType}
+   *
+   * <pre>
+   **
+   *response message type
+   * </pre>
+   */
+  public enum EtMessageRType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>Tet1001R = 1;</code>
+     */
+    Tet1001R(0, 1),
+    /**
+     * <code>Tet1002R = 2;</code>
+     */
+    Tet1002R(1, 2),
+    /**
+     * <code>Tet2001R = 3;</code>
+     */
+    Tet2001R(2, 3),
+    /**
+     * <code>Tet3001R = 4;</code>
+     */
+    Tet3001R(3, 4),
+    /**
+     * <code>Tet3002R = 5;</code>
+     */
+    Tet3002R(4, 5),
+    /**
+     * <code>Tet3003R = 6;</code>
+     */
+    Tet3003R(5, 6),
+    /**
+     * <code>Tet3004R = 7;</code>
+     */
+    Tet3004R(6, 7),
+    ;
+
+    /**
+     * <code>Tet1001R = 1;</code>
+     */
+    public static final int Tet1001R_VALUE = 1;
+    /**
+     * <code>Tet1002R = 2;</code>
+     */
+    public static final int Tet1002R_VALUE = 2;
+    /**
+     * <code>Tet2001R = 3;</code>
+     */
+    public static final int Tet2001R_VALUE = 3;
+    /**
+     * <code>Tet3001R = 4;</code>
+     */
+    public static final int Tet3001R_VALUE = 4;
+    /**
+     * <code>Tet3002R = 5;</code>
+     */
+    public static final int Tet3002R_VALUE = 5;
+    /**
+     * <code>Tet3003R = 6;</code>
+     */
+    public static final int Tet3003R_VALUE = 6;
+    /**
+     * <code>Tet3004R = 7;</code>
+     */
+    public static final int Tet3004R_VALUE = 7;
+
+
+    public final int getNumber() { return value; }
+
+    public static EtMessageRType valueOf(int value) {
+      switch (value) {
+        case 1: return Tet1001R;
+        case 2: return Tet1002R;
+        case 3: return Tet2001R;
+        case 4: return Tet3001R;
+        case 5: return Tet3002R;
+        case 6: return Tet3003R;
+        case 7: return Tet3004R;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EtMessageRType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EtMessageRType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EtMessageRType>() {
+            public EtMessageRType findValueByNumber(int number) {
+              return EtMessageRType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final EtMessageRType[] VALUES = values();
+
+    public static EtMessageRType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EtMessageRType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.taoeaten.et.protobuf.EtMessageRType)
+  }
+
+  /**
+   * Protobuf enum {@code com.taoeaten.et.protobuf.EtResponseStatus}
+   */
+  public enum EtResponseStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SUCCESS = 1;</code>
+     */
+    SUCCESS(0, 1),
+    /**
+     * <code>FAILED = 2;</code>
+     */
+    FAILED(1, 2),
+    ;
+
+    /**
+     * <code>SUCCESS = 1;</code>
+     */
+    public static final int SUCCESS_VALUE = 1;
+    /**
+     * <code>FAILED = 2;</code>
+     */
+    public static final int FAILED_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static EtResponseStatus valueOf(int value) {
+      switch (value) {
+        case 1: return SUCCESS;
+        case 2: return FAILED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EtResponseStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EtResponseStatus>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EtResponseStatus>() {
+            public EtResponseStatus findValueByNumber(int number) {
+              return EtResponseStatus.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final EtResponseStatus[] VALUES = values();
+
+    public static EtResponseStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EtResponseStatus(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.taoeaten.et.protobuf.EtResponseStatus)
+  }
+
+  public interface PlayerOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required int32 cmdNo = 1;
+    // required int32 id = 1;
     /**
-     * <code>required int32 cmdNo = 1;</code>
+     * <code>required int32 id = 1;</code>
      */
-    boolean hasCmdNo();
+    boolean hasId();
     /**
-     * <code>required int32 cmdNo = 1;</code>
+     * <code>required int32 id = 1;</code>
      */
-    int getCmdNo();
+    int getId();
 
-    // required string userName = 2;
+    // required string name = 2;
     /**
-     * <code>required string userName = 2;</code>
+     * <code>required string name = 2;</code>
      */
-    boolean hasUserName();
+    boolean hasName();
     /**
-     * <code>required string userName = 2;</code>
+     * <code>required string name = 2;</code>
      */
-    java.lang.String getUserName();
+    java.lang.String getName();
     /**
-     * <code>required string userName = 2;</code>
+     * <code>required string name = 2;</code>
      */
     com.google.protobuf.ByteString
-        getUserNameBytes();
+        getNameBytes();
 
-    // optional int32 roomNo = 3;
+    // optional string password = 3;
     /**
-     * <code>optional int32 roomNo = 3;</code>
+     * <code>optional string password = 3;</code>
      */
-    boolean hasRoomNo();
+    boolean hasPassword();
     /**
-     * <code>optional int32 roomNo = 3;</code>
+     * <code>optional string password = 3;</code>
      */
-    int getRoomNo();
+    java.lang.String getPassword();
+    /**
+     * <code>optional string password = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getPasswordBytes();
 
-    // optional int32 userReady = 4;
+    // optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;
     /**
-     * <code>optional int32 userReady = 4;</code>
+     * <code>optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;</code>
      */
-    boolean hasUserReady();
+    boolean hasStatus();
     /**
-     * <code>optional int32 userReady = 4;</code>
+     * <code>optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;</code>
      */
-    int getUserReady();
-
-    // repeated .com.taoeaten.et.protobuf.Room rooms = 5;
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> 
-        getRoomsList();
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    com.taoeaten.et.protobuf.CommandProtobuf.Room getRooms(int index);
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    int getRoomsCount();
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    java.util.List<? extends com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> 
-        getRoomsOrBuilderList();
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder getRoomsOrBuilder(
-        int index);
+    com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus getStatus();
   }
   /**
-   * Protobuf type {@code com.taoeaten.et.protobuf.Command}
+   * Protobuf type {@code com.taoeaten.et.protobuf.Player}
    */
-  public static final class Command extends
+  public static final class Player extends
       com.google.protobuf.GeneratedMessage
-      implements CommandOrBuilder {
-    // Use Command.newBuilder() to construct.
-    private Command(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      implements PlayerOrBuilder {
+    // Use Player.newBuilder() to construct.
+    private Player(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Command(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private Player(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Command defaultInstance;
-    public static Command getDefaultInstance() {
+    private static final Player defaultInstance;
+    public static Player getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Command getDefaultInstanceForType() {
+    public Player getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -109,7 +640,7 @@ public final class CommandProtobuf {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Command(
+    private Player(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -134,30 +665,28 @@ public final class CommandProtobuf {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              cmdNo_ = input.readInt32();
+              id_ = input.readInt32();
               break;
             }
             case 18: {
               bitField0_ |= 0x00000002;
-              userName_ = input.readBytes();
+              name_ = input.readBytes();
               break;
             }
-            case 24: {
+            case 26: {
               bitField0_ |= 0x00000004;
-              roomNo_ = input.readInt32();
+              password_ = input.readBytes();
               break;
             }
             case 32: {
-              bitField0_ |= 0x00000008;
-              userReady_ = input.readInt32();
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                rooms_ = new java.util.ArrayList<com.taoeaten.et.protobuf.CommandProtobuf.Room>();
-                mutable_bitField0_ |= 0x00000010;
+              int rawValue = input.readEnum();
+              com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus value = com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(4, rawValue);
+              } else {
+                bitField0_ |= 0x00000008;
+                status_ = value;
               }
-              rooms_.add(input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Room.PARSER, extensionRegistry));
               break;
             }
           }
@@ -168,71 +697,68 @@ public final class CommandProtobuf {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          rooms_ = java.util.Collections.unmodifiableList(rooms_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Command_descriptor;
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Player_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Command_fieldAccessorTable
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Player_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.taoeaten.et.protobuf.CommandProtobuf.Command.class, com.taoeaten.et.protobuf.CommandProtobuf.Command.Builder.class);
+              com.taoeaten.et.protobuf.CommandProtobuf.Player.class, com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Command> PARSER =
-        new com.google.protobuf.AbstractParser<Command>() {
-      public Command parsePartialFrom(
+    public static com.google.protobuf.Parser<Player> PARSER =
+        new com.google.protobuf.AbstractParser<Player>() {
+      public Player parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Command(input, extensionRegistry);
+        return new Player(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Command> getParserForType() {
+    public com.google.protobuf.Parser<Player> getParserForType() {
       return PARSER;
     }
 
     private int bitField0_;
-    // required int32 cmdNo = 1;
-    public static final int CMDNO_FIELD_NUMBER = 1;
-    private int cmdNo_;
+    // required int32 id = 1;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
     /**
-     * <code>required int32 cmdNo = 1;</code>
+     * <code>required int32 id = 1;</code>
      */
-    public boolean hasCmdNo() {
+    public boolean hasId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 cmdNo = 1;</code>
+     * <code>required int32 id = 1;</code>
      */
-    public int getCmdNo() {
-      return cmdNo_;
+    public int getId() {
+      return id_;
     }
 
-    // required string userName = 2;
-    public static final int USERNAME_FIELD_NUMBER = 2;
-    private java.lang.Object userName_;
+    // required string name = 2;
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.Object name_;
     /**
-     * <code>required string userName = 2;</code>
+     * <code>required string name = 2;</code>
      */
-    public boolean hasUserName() {
+    public boolean hasName() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required string userName = 2;</code>
+     * <code>required string name = 2;</code>
      */
-    public java.lang.String getUserName() {
-      java.lang.Object ref = userName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -240,121 +766,105 @@ public final class CommandProtobuf {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          userName_ = s;
+          name_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>required string userName = 2;</code>
+     * <code>required string name = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getUserNameBytes() {
-      java.lang.Object ref = userName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        userName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    // optional int32 roomNo = 3;
-    public static final int ROOMNO_FIELD_NUMBER = 3;
-    private int roomNo_;
+    // optional string password = 3;
+    public static final int PASSWORD_FIELD_NUMBER = 3;
+    private java.lang.Object password_;
     /**
-     * <code>optional int32 roomNo = 3;</code>
+     * <code>optional string password = 3;</code>
      */
-    public boolean hasRoomNo() {
+    public boolean hasPassword() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional int32 roomNo = 3;</code>
+     * <code>optional string password = 3;</code>
      */
-    public int getRoomNo() {
-      return roomNo_;
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          password_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string password = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    // optional int32 userReady = 4;
-    public static final int USERREADY_FIELD_NUMBER = 4;
-    private int userReady_;
+    // optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;
+    public static final int STATUS_FIELD_NUMBER = 4;
+    private com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus status_;
     /**
-     * <code>optional int32 userReady = 4;</code>
+     * <code>optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;</code>
      */
-    public boolean hasUserReady() {
+    public boolean hasStatus() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional int32 userReady = 4;</code>
+     * <code>optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;</code>
      */
-    public int getUserReady() {
-      return userReady_;
-    }
-
-    // repeated .com.taoeaten.et.protobuf.Room rooms = 5;
-    public static final int ROOMS_FIELD_NUMBER = 5;
-    private java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> rooms_;
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    public java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> getRoomsList() {
-      return rooms_;
-    }
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    public java.util.List<? extends com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> 
-        getRoomsOrBuilderList() {
-      return rooms_;
-    }
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    public int getRoomsCount() {
-      return rooms_.size();
-    }
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    public com.taoeaten.et.protobuf.CommandProtobuf.Room getRooms(int index) {
-      return rooms_.get(index);
-    }
-    /**
-     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-     */
-    public com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder getRoomsOrBuilder(
-        int index) {
-      return rooms_.get(index);
+    public com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus getStatus() {
+      return status_;
     }
 
     private void initFields() {
-      cmdNo_ = 0;
-      userName_ = "";
-      roomNo_ = 0;
-      userReady_ = 0;
-      rooms_ = java.util.Collections.emptyList();
+      id_ = 0;
+      name_ = "";
+      password_ = "";
+      status_ = com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus.OFFLINE;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
-      if (!hasCmdNo()) {
+      if (!hasId()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasUserName()) {
+      if (!hasName()) {
         memoizedIsInitialized = 0;
         return false;
-      }
-      for (int i = 0; i < getRoomsCount(); i++) {
-        if (!getRooms(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -364,19 +874,16 @@ public final class CommandProtobuf {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, cmdNo_);
+        output.writeInt32(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getUserNameBytes());
+        output.writeBytes(2, getNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(3, roomNo_);
+        output.writeBytes(3, getPasswordBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt32(4, userReady_);
-      }
-      for (int i = 0; i < rooms_.size(); i++) {
-        output.writeMessage(5, rooms_.get(i));
+        output.writeEnum(4, status_.getNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -389,23 +896,19 @@ public final class CommandProtobuf {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, cmdNo_);
+          .computeInt32Size(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getUserNameBytes());
+          .computeBytesSize(2, getNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, roomNo_);
+          .computeBytesSize(3, getPasswordBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, userReady_);
-      }
-      for (int i = 0; i < rooms_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, rooms_.get(i));
+          .computeEnumSize(4, status_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -419,53 +922,53 @@ public final class CommandProtobuf {
       return super.writeReplace();
     }
 
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseFrom(
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseFrom(
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseFrom(byte[] data)
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseFrom(
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseFrom(java.io.InputStream input)
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseFrom(
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseDelimitedFrom(java.io.InputStream input)
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseDelimitedFrom(
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseFrom(
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.taoeaten.et.protobuf.CommandProtobuf.Command parseFrom(
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Player parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -474,7 +977,7 @@ public final class CommandProtobuf {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Command prototype) {
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Player prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -486,24 +989,24 @@ public final class CommandProtobuf {
       return builder;
     }
     /**
-     * Protobuf type {@code com.taoeaten.et.protobuf.Command}
+     * Protobuf type {@code com.taoeaten.et.protobuf.Player}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.taoeaten.et.protobuf.CommandProtobuf.CommandOrBuilder {
+       implements com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Command_descriptor;
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Player_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Command_fieldAccessorTable
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Player_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.taoeaten.et.protobuf.CommandProtobuf.Command.class, com.taoeaten.et.protobuf.CommandProtobuf.Command.Builder.class);
+                com.taoeaten.et.protobuf.CommandProtobuf.Player.class, com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder.class);
       }
 
-      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Command.newBuilder()
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Player.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -515,7 +1018,6 @@ public final class CommandProtobuf {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getRoomsFieldBuilder();
         }
       }
       private static Builder create() {
@@ -524,20 +1026,14 @@ public final class CommandProtobuf {
 
       public Builder clear() {
         super.clear();
-        cmdNo_ = 0;
+        id_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        userName_ = "";
+        name_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        roomNo_ = 0;
+        password_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        userReady_ = 0;
+        status_ = com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus.OFFLINE;
         bitField0_ = (bitField0_ & ~0x00000008);
-        if (roomsBuilder_ == null) {
-          rooms_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
-        } else {
-          roomsBuilder_.clear();
-        }
         return this;
       }
 
@@ -547,124 +1043,85 @@ public final class CommandProtobuf {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Command_descriptor;
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Player_descriptor;
       }
 
-      public com.taoeaten.et.protobuf.CommandProtobuf.Command getDefaultInstanceForType() {
-        return com.taoeaten.et.protobuf.CommandProtobuf.Command.getDefaultInstance();
+      public com.taoeaten.et.protobuf.CommandProtobuf.Player getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Player.getDefaultInstance();
       }
 
-      public com.taoeaten.et.protobuf.CommandProtobuf.Command build() {
-        com.taoeaten.et.protobuf.CommandProtobuf.Command result = buildPartial();
+      public com.taoeaten.et.protobuf.CommandProtobuf.Player build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Player result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.taoeaten.et.protobuf.CommandProtobuf.Command buildPartial() {
-        com.taoeaten.et.protobuf.CommandProtobuf.Command result = new com.taoeaten.et.protobuf.CommandProtobuf.Command(this);
+      public com.taoeaten.et.protobuf.CommandProtobuf.Player buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Player result = new com.taoeaten.et.protobuf.CommandProtobuf.Player(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.cmdNo_ = cmdNo_;
+        result.id_ = id_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.userName_ = userName_;
+        result.name_ = name_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.roomNo_ = roomNo_;
+        result.password_ = password_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.userReady_ = userReady_;
-        if (roomsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
-            rooms_ = java.util.Collections.unmodifiableList(rooms_);
-            bitField0_ = (bitField0_ & ~0x00000010);
-          }
-          result.rooms_ = rooms_;
-        } else {
-          result.rooms_ = roomsBuilder_.build();
-        }
+        result.status_ = status_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Command) {
-          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Command)other);
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Player) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Player)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Command other) {
-        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Command.getDefaultInstance()) return this;
-        if (other.hasCmdNo()) {
-          setCmdNo(other.getCmdNo());
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Player other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Player.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
         }
-        if (other.hasUserName()) {
+        if (other.hasName()) {
           bitField0_ |= 0x00000002;
-          userName_ = other.userName_;
+          name_ = other.name_;
           onChanged();
         }
-        if (other.hasRoomNo()) {
-          setRoomNo(other.getRoomNo());
+        if (other.hasPassword()) {
+          bitField0_ |= 0x00000004;
+          password_ = other.password_;
+          onChanged();
         }
-        if (other.hasUserReady()) {
-          setUserReady(other.getUserReady());
-        }
-        if (roomsBuilder_ == null) {
-          if (!other.rooms_.isEmpty()) {
-            if (rooms_.isEmpty()) {
-              rooms_ = other.rooms_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-            } else {
-              ensureRoomsIsMutable();
-              rooms_.addAll(other.rooms_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.rooms_.isEmpty()) {
-            if (roomsBuilder_.isEmpty()) {
-              roomsBuilder_.dispose();
-              roomsBuilder_ = null;
-              rooms_ = other.rooms_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-              roomsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getRoomsFieldBuilder() : null;
-            } else {
-              roomsBuilder_.addAllMessages(other.rooms_);
-            }
-          }
+        if (other.hasStatus()) {
+          setStatus(other.getStatus());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
-        if (!hasCmdNo()) {
+        if (!hasId()) {
           
           return false;
         }
-        if (!hasUserName()) {
+        if (!hasName()) {
           
           return false;
-        }
-        for (int i = 0; i < getRoomsCount(); i++) {
-          if (!getRooms(i).isInitialized()) {
-            
-            return false;
-          }
         }
         return true;
       }
@@ -673,11 +1130,11 @@ public final class CommandProtobuf {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.taoeaten.et.protobuf.CommandProtobuf.Command parsedMessage = null;
+        com.taoeaten.et.protobuf.CommandProtobuf.Player parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Command) e.getUnfinishedMessage();
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Player) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -688,442 +1145,296 @@ public final class CommandProtobuf {
       }
       private int bitField0_;
 
-      // required int32 cmdNo = 1;
-      private int cmdNo_ ;
+      // required int32 id = 1;
+      private int id_ ;
       /**
-       * <code>required int32 cmdNo = 1;</code>
+       * <code>required int32 id = 1;</code>
        */
-      public boolean hasCmdNo() {
+      public boolean hasId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 cmdNo = 1;</code>
+       * <code>required int32 id = 1;</code>
        */
-      public int getCmdNo() {
-        return cmdNo_;
+      public int getId() {
+        return id_;
       }
       /**
-       * <code>required int32 cmdNo = 1;</code>
+       * <code>required int32 id = 1;</code>
        */
-      public Builder setCmdNo(int value) {
+      public Builder setId(int value) {
         bitField0_ |= 0x00000001;
-        cmdNo_ = value;
+        id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 cmdNo = 1;</code>
+       * <code>required int32 id = 1;</code>
        */
-      public Builder clearCmdNo() {
+      public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        cmdNo_ = 0;
+        id_ = 0;
         onChanged();
         return this;
       }
 
-      // required string userName = 2;
-      private java.lang.Object userName_ = "";
+      // required string name = 2;
+      private java.lang.Object name_ = "";
       /**
-       * <code>required string userName = 2;</code>
+       * <code>required string name = 2;</code>
        */
-      public boolean hasUserName() {
+      public boolean hasName() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required string userName = 2;</code>
+       * <code>required string name = 2;</code>
        */
-      public java.lang.String getUserName() {
-        java.lang.Object ref = userName_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           java.lang.String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
-          userName_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>required string userName = 2;</code>
+       * <code>required string name = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getUserNameBytes() {
-        java.lang.Object ref = userName_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          userName_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>required string userName = 2;</code>
+       * <code>required string name = 2;</code>
        */
-      public Builder setUserName(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        userName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string userName = 2;</code>
+       * <code>required string name = 2;</code>
        */
-      public Builder clearUserName() {
+      public Builder clearName() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        userName_ = getDefaultInstance().getUserName();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>required string userName = 2;</code>
+       * <code>required string name = 2;</code>
        */
-      public Builder setUserNameBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000002;
-        userName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
 
-      // optional int32 roomNo = 3;
-      private int roomNo_ ;
+      // optional string password = 3;
+      private java.lang.Object password_ = "";
       /**
-       * <code>optional int32 roomNo = 3;</code>
+       * <code>optional string password = 3;</code>
        */
-      public boolean hasRoomNo() {
+      public boolean hasPassword() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional int32 roomNo = 3;</code>
+       * <code>optional string password = 3;</code>
        */
-      public int getRoomNo() {
-        return roomNo_;
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>optional int32 roomNo = 3;</code>
+       * <code>optional string password = 3;</code>
        */
-      public Builder setRoomNo(int value) {
-        bitField0_ |= 0x00000004;
-        roomNo_ = value;
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string password = 3;</code>
+       */
+      public Builder setPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        password_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 roomNo = 3;</code>
+       * <code>optional string password = 3;</code>
        */
-      public Builder clearRoomNo() {
+      public Builder clearPassword() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        roomNo_ = 0;
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string password = 3;</code>
+       */
+      public Builder setPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        password_ = value;
         onChanged();
         return this;
       }
 
-      // optional int32 userReady = 4;
-      private int userReady_ ;
+      // optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;
+      private com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus status_ = com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus.OFFLINE;
       /**
-       * <code>optional int32 userReady = 4;</code>
+       * <code>optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;</code>
        */
-      public boolean hasUserReady() {
+      public boolean hasStatus() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional int32 userReady = 4;</code>
+       * <code>optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;</code>
        */
-      public int getUserReady() {
-        return userReady_;
+      public com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus getStatus() {
+        return status_;
       }
       /**
-       * <code>optional int32 userReady = 4;</code>
+       * <code>optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;</code>
        */
-      public Builder setUserReady(int value) {
+      public Builder setStatus(com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         bitField0_ |= 0x00000008;
-        userReady_ = value;
+        status_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 userReady = 4;</code>
+       * <code>optional .com.taoeaten.et.protobuf.PlayerStatus status = 4;</code>
        */
-      public Builder clearUserReady() {
+      public Builder clearStatus() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        userReady_ = 0;
+        status_ = com.taoeaten.et.protobuf.CommandProtobuf.PlayerStatus.OFFLINE;
         onChanged();
         return this;
       }
 
-      // repeated .com.taoeaten.et.protobuf.Room rooms = 5;
-      private java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> rooms_ =
-        java.util.Collections.emptyList();
-      private void ensureRoomsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          rooms_ = new java.util.ArrayList<com.taoeaten.et.protobuf.CommandProtobuf.Room>(rooms_);
-          bitField0_ |= 0x00000010;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.taoeaten.et.protobuf.CommandProtobuf.Room, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder, com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> roomsBuilder_;
-
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> getRoomsList() {
-        if (roomsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(rooms_);
-        } else {
-          return roomsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public int getRoomsCount() {
-        if (roomsBuilder_ == null) {
-          return rooms_.size();
-        } else {
-          return roomsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public com.taoeaten.et.protobuf.CommandProtobuf.Room getRooms(int index) {
-        if (roomsBuilder_ == null) {
-          return rooms_.get(index);
-        } else {
-          return roomsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public Builder setRooms(
-          int index, com.taoeaten.et.protobuf.CommandProtobuf.Room value) {
-        if (roomsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRoomsIsMutable();
-          rooms_.set(index, value);
-          onChanged();
-        } else {
-          roomsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public Builder setRooms(
-          int index, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder builderForValue) {
-        if (roomsBuilder_ == null) {
-          ensureRoomsIsMutable();
-          rooms_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          roomsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public Builder addRooms(com.taoeaten.et.protobuf.CommandProtobuf.Room value) {
-        if (roomsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRoomsIsMutable();
-          rooms_.add(value);
-          onChanged();
-        } else {
-          roomsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public Builder addRooms(
-          int index, com.taoeaten.et.protobuf.CommandProtobuf.Room value) {
-        if (roomsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRoomsIsMutable();
-          rooms_.add(index, value);
-          onChanged();
-        } else {
-          roomsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public Builder addRooms(
-          com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder builderForValue) {
-        if (roomsBuilder_ == null) {
-          ensureRoomsIsMutable();
-          rooms_.add(builderForValue.build());
-          onChanged();
-        } else {
-          roomsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public Builder addRooms(
-          int index, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder builderForValue) {
-        if (roomsBuilder_ == null) {
-          ensureRoomsIsMutable();
-          rooms_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          roomsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public Builder addAllRooms(
-          java.lang.Iterable<? extends com.taoeaten.et.protobuf.CommandProtobuf.Room> values) {
-        if (roomsBuilder_ == null) {
-          ensureRoomsIsMutable();
-          super.addAll(values, rooms_);
-          onChanged();
-        } else {
-          roomsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public Builder clearRooms() {
-        if (roomsBuilder_ == null) {
-          rooms_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
-          onChanged();
-        } else {
-          roomsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public Builder removeRooms(int index) {
-        if (roomsBuilder_ == null) {
-          ensureRoomsIsMutable();
-          rooms_.remove(index);
-          onChanged();
-        } else {
-          roomsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder getRoomsBuilder(
-          int index) {
-        return getRoomsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder getRoomsOrBuilder(
-          int index) {
-        if (roomsBuilder_ == null) {
-          return rooms_.get(index);  } else {
-          return roomsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public java.util.List<? extends com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> 
-           getRoomsOrBuilderList() {
-        if (roomsBuilder_ != null) {
-          return roomsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(rooms_);
-        }
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder addRoomsBuilder() {
-        return getRoomsFieldBuilder().addBuilder(
-            com.taoeaten.et.protobuf.CommandProtobuf.Room.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder addRoomsBuilder(
-          int index) {
-        return getRoomsFieldBuilder().addBuilder(
-            index, com.taoeaten.et.protobuf.CommandProtobuf.Room.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 5;</code>
-       */
-      public java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder> 
-           getRoomsBuilderList() {
-        return getRoomsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.taoeaten.et.protobuf.CommandProtobuf.Room, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder, com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> 
-          getRoomsFieldBuilder() {
-        if (roomsBuilder_ == null) {
-          roomsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.taoeaten.et.protobuf.CommandProtobuf.Room, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder, com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder>(
-                  rooms_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
-                  getParentForChildren(),
-                  isClean());
-          rooms_ = null;
-        }
-        return roomsBuilder_;
-      }
-
-      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Command)
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Player)
     }
 
     static {
-      defaultInstance = new Command(true);
+      defaultInstance = new Player(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Command)
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Player)
   }
 
   public interface RoomOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required int32 roomId = 1;
+    // required int32 id = 1;
     /**
-     * <code>required int32 roomId = 1;</code>
+     * <code>required int32 id = 1;</code>
      */
-    boolean hasRoomId();
+    boolean hasId();
     /**
-     * <code>required int32 roomId = 1;</code>
+     * <code>required int32 id = 1;</code>
      */
-    int getRoomId();
+    int getId();
+
+    // required string name = 2;
+    /**
+     * <code>required string name = 2;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string name = 2;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    // required .com.taoeaten.et.protobuf.RoomStatus status = 3;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.RoomStatus status = 3;</code>
+     */
+    boolean hasStatus();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.RoomStatus status = 3;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus getStatus();
+
+    // repeated .com.taoeaten.et.protobuf.Player players = 4;
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Player> 
+        getPlayersList();
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Player getPlayers(int index);
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    int getPlayersCount();
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    java.util.List<? extends com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder> 
+        getPlayersOrBuilderList();
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder getPlayersOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code com.taoeaten.et.protobuf.Room}
@@ -1178,7 +1489,31 @@ public final class CommandProtobuf {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              roomId_ = input.readInt32();
+              id_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              name_ = input.readBytes();
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus value = com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                status_ = value;
+              }
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                players_ = new java.util.ArrayList<com.taoeaten.et.protobuf.CommandProtobuf.Player>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              players_.add(input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Player.PARSER, extensionRegistry));
               break;
             }
           }
@@ -1189,6 +1524,9 @@ public final class CommandProtobuf {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          players_ = java.util.Collections.unmodifiableList(players_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1221,33 +1559,145 @@ public final class CommandProtobuf {
     }
 
     private int bitField0_;
-    // required int32 roomId = 1;
-    public static final int ROOMID_FIELD_NUMBER = 1;
-    private int roomId_;
+    // required int32 id = 1;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
     /**
-     * <code>required int32 roomId = 1;</code>
+     * <code>required int32 id = 1;</code>
      */
-    public boolean hasRoomId() {
+    public boolean hasId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 roomId = 1;</code>
+     * <code>required int32 id = 1;</code>
      */
-    public int getRoomId() {
-      return roomId_;
+    public int getId() {
+      return id_;
+    }
+
+    // required string name = 2;
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.Object name_;
+    /**
+     * <code>required string name = 2;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string name = 2;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required .com.taoeaten.et.protobuf.RoomStatus status = 3;
+    public static final int STATUS_FIELD_NUMBER = 3;
+    private com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus status_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.RoomStatus status = 3;</code>
+     */
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.RoomStatus status = 3;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus getStatus() {
+      return status_;
+    }
+
+    // repeated .com.taoeaten.et.protobuf.Player players = 4;
+    public static final int PLAYERS_FIELD_NUMBER = 4;
+    private java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Player> players_;
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    public java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Player> getPlayersList() {
+      return players_;
+    }
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    public java.util.List<? extends com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder> 
+        getPlayersOrBuilderList() {
+      return players_;
+    }
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    public int getPlayersCount() {
+      return players_.size();
+    }
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Player getPlayers(int index) {
+      return players_.get(index);
+    }
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder getPlayersOrBuilder(
+        int index) {
+      return players_.get(index);
     }
 
     private void initFields() {
-      roomId_ = 0;
+      id_ = 0;
+      name_ = "";
+      status_ = com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus.WAIT;
+      players_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
-      if (!hasRoomId()) {
+      if (!hasId()) {
         memoizedIsInitialized = 0;
         return false;
+      }
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getPlayersCount(); i++) {
+        if (!getPlayers(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -1257,7 +1707,16 @@ public final class CommandProtobuf {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, roomId_);
+        output.writeInt32(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(3, status_.getNumber());
+      }
+      for (int i = 0; i < players_.size(); i++) {
+        output.writeMessage(4, players_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -1270,7 +1729,19 @@ public final class CommandProtobuf {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, roomId_);
+          .computeInt32Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, status_.getNumber());
+      }
+      for (int i = 0; i < players_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, players_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1380,6 +1851,7 @@ public final class CommandProtobuf {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPlayersFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1388,8 +1860,18 @@ public final class CommandProtobuf {
 
       public Builder clear() {
         super.clear();
-        roomId_ = 0;
+        id_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        status_ = com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus.WAIT;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (playersBuilder_ == null) {
+          players_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          playersBuilder_.clear();
+        }
         return this;
       }
 
@@ -1421,7 +1903,24 @@ public final class CommandProtobuf {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.roomId_ = roomId_;
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.status_ = status_;
+        if (playersBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            players_ = java.util.Collections.unmodifiableList(players_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.players_ = players_;
+        } else {
+          result.players_ = playersBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1438,17 +1937,65 @@ public final class CommandProtobuf {
 
       public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Room other) {
         if (other == com.taoeaten.et.protobuf.CommandProtobuf.Room.getDefaultInstance()) return this;
-        if (other.hasRoomId()) {
-          setRoomId(other.getRoomId());
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000002;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasStatus()) {
+          setStatus(other.getStatus());
+        }
+        if (playersBuilder_ == null) {
+          if (!other.players_.isEmpty()) {
+            if (players_.isEmpty()) {
+              players_ = other.players_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensurePlayersIsMutable();
+              players_.addAll(other.players_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.players_.isEmpty()) {
+            if (playersBuilder_.isEmpty()) {
+              playersBuilder_.dispose();
+              playersBuilder_ = null;
+              players_ = other.players_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              playersBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPlayersFieldBuilder() : null;
+            } else {
+              playersBuilder_.addAllMessages(other.players_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
-        if (!hasRoomId()) {
+        if (!hasId()) {
           
           return false;
+        }
+        if (!hasName()) {
+          
+          return false;
+        }
+        if (!hasStatus()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getPlayersCount(); i++) {
+          if (!getPlayers(i).isInitialized()) {
+            
+            return false;
+          }
         }
         return true;
       }
@@ -1472,37 +2019,387 @@ public final class CommandProtobuf {
       }
       private int bitField0_;
 
-      // required int32 roomId = 1;
-      private int roomId_ ;
+      // required int32 id = 1;
+      private int id_ ;
       /**
-       * <code>required int32 roomId = 1;</code>
+       * <code>required int32 id = 1;</code>
        */
-      public boolean hasRoomId() {
+      public boolean hasId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 roomId = 1;</code>
+       * <code>required int32 id = 1;</code>
        */
-      public int getRoomId() {
-        return roomId_;
+      public int getId() {
+        return id_;
       }
       /**
-       * <code>required int32 roomId = 1;</code>
+       * <code>required int32 id = 1;</code>
        */
-      public Builder setRoomId(int value) {
+      public Builder setId(int value) {
         bitField0_ |= 0x00000001;
-        roomId_ = value;
+        id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 roomId = 1;</code>
+       * <code>required int32 id = 1;</code>
        */
-      public Builder clearRoomId() {
+      public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        roomId_ = 0;
+        id_ = 0;
         onChanged();
         return this;
+      }
+
+      // required string name = 2;
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string name = 2;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string name = 2;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string name = 2;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 2;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 2;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required .com.taoeaten.et.protobuf.RoomStatus status = 3;
+      private com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus status_ = com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus.WAIT;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.RoomStatus status = 3;</code>
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.RoomStatus status = 3;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus getStatus() {
+        return status_;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.RoomStatus status = 3;</code>
+       */
+      public Builder setStatus(com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.RoomStatus status = 3;</code>
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        status_ = com.taoeaten.et.protobuf.CommandProtobuf.RoomStatus.WAIT;
+        onChanged();
+        return this;
+      }
+
+      // repeated .com.taoeaten.et.protobuf.Player players = 4;
+      private java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Player> players_ =
+        java.util.Collections.emptyList();
+      private void ensurePlayersIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          players_ = new java.util.ArrayList<com.taoeaten.et.protobuf.CommandProtobuf.Player>(players_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Player, com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder, com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder> playersBuilder_;
+
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Player> getPlayersList() {
+        if (playersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(players_);
+        } else {
+          return playersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public int getPlayersCount() {
+        if (playersBuilder_ == null) {
+          return players_.size();
+        } else {
+          return playersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Player getPlayers(int index) {
+        if (playersBuilder_ == null) {
+          return players_.get(index);
+        } else {
+          return playersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public Builder setPlayers(
+          int index, com.taoeaten.et.protobuf.CommandProtobuf.Player value) {
+        if (playersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlayersIsMutable();
+          players_.set(index, value);
+          onChanged();
+        } else {
+          playersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public Builder setPlayers(
+          int index, com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder builderForValue) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          players_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          playersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public Builder addPlayers(com.taoeaten.et.protobuf.CommandProtobuf.Player value) {
+        if (playersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlayersIsMutable();
+          players_.add(value);
+          onChanged();
+        } else {
+          playersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public Builder addPlayers(
+          int index, com.taoeaten.et.protobuf.CommandProtobuf.Player value) {
+        if (playersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlayersIsMutable();
+          players_.add(index, value);
+          onChanged();
+        } else {
+          playersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public Builder addPlayers(
+          com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder builderForValue) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          players_.add(builderForValue.build());
+          onChanged();
+        } else {
+          playersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public Builder addPlayers(
+          int index, com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder builderForValue) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          players_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          playersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public Builder addAllPlayers(
+          java.lang.Iterable<? extends com.taoeaten.et.protobuf.CommandProtobuf.Player> values) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          super.addAll(values, players_);
+          onChanged();
+        } else {
+          playersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public Builder clearPlayers() {
+        if (playersBuilder_ == null) {
+          players_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          playersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public Builder removePlayers(int index) {
+        if (playersBuilder_ == null) {
+          ensurePlayersIsMutable();
+          players_.remove(index);
+          onChanged();
+        } else {
+          playersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder getPlayersBuilder(
+          int index) {
+        return getPlayersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder getPlayersOrBuilder(
+          int index) {
+        if (playersBuilder_ == null) {
+          return players_.get(index);  } else {
+          return playersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public java.util.List<? extends com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder> 
+           getPlayersOrBuilderList() {
+        if (playersBuilder_ != null) {
+          return playersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(players_);
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder addPlayersBuilder() {
+        return getPlayersFieldBuilder().addBuilder(
+            com.taoeaten.et.protobuf.CommandProtobuf.Player.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder addPlayersBuilder(
+          int index) {
+        return getPlayersFieldBuilder().addBuilder(
+            index, com.taoeaten.et.protobuf.CommandProtobuf.Player.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Player players = 4;</code>
+       */
+      public java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder> 
+           getPlayersBuilderList() {
+        return getPlayersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Player, com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder, com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder> 
+          getPlayersFieldBuilder() {
+        if (playersBuilder_ == null) {
+          playersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Player, com.taoeaten.et.protobuf.CommandProtobuf.Player.Builder, com.taoeaten.et.protobuf.CommandProtobuf.PlayerOrBuilder>(
+                  players_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          players_ = null;
+        }
+        return playersBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Room)
@@ -1516,16 +2413,11767 @@ public final class CommandProtobuf {
     // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Room)
   }
 
+  public interface EtResponseOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;</code>
+     */
+    boolean hasStatus();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus getStatus();
+
+    // optional string hint = 2;
+    /**
+     * <code>optional string hint = 2;</code>
+     */
+    boolean hasHint();
+    /**
+     * <code>optional string hint = 2;</code>
+     */
+    java.lang.String getHint();
+    /**
+     * <code>optional string hint = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getHintBytes();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.EtResponse}
+   */
+  public static final class EtResponse extends
+      com.google.protobuf.GeneratedMessage
+      implements EtResponseOrBuilder {
+    // Use EtResponse.newBuilder() to construct.
+    private EtResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private EtResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final EtResponse defaultInstance;
+    public static EtResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public EtResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EtResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus value = com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                status_ = value;
+              }
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              hint_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtResponse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.class, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<EtResponse> PARSER =
+        new com.google.protobuf.AbstractParser<EtResponse>() {
+      public EtResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EtResponse(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EtResponse> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus status_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;</code>
+     */
+    public boolean hasStatus() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus getStatus() {
+      return status_;
+    }
+
+    // optional string hint = 2;
+    public static final int HINT_FIELD_NUMBER = 2;
+    private java.lang.Object hint_;
+    /**
+     * <code>optional string hint = 2;</code>
+     */
+    public boolean hasHint() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string hint = 2;</code>
+     */
+    public java.lang.String getHint() {
+      java.lang.Object ref = hint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          hint_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string hint = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHintBytes() {
+      java.lang.Object ref = hint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      status_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus.SUCCESS;
+      hint_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasStatus()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, status_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getHintBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, status_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getHintBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.EtResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtResponse_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.class, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        status_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus.SUCCESS;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hint_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtResponse_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.EtResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.EtResponse result = new com.taoeaten.et.protobuf.CommandProtobuf.EtResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.status_ = status_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.hint_ = hint_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.EtResponse) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.EtResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance()) return this;
+        if (other.hasStatus()) {
+          setStatus(other.getStatus());
+        }
+        if (other.hasHint()) {
+          bitField0_ |= 0x00000002;
+          hint_ = other.hint_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasStatus()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.EtResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.EtResponse) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus status_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus.SUCCESS;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;</code>
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus getStatus() {
+        return status_;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;</code>
+       */
+      public Builder setStatus(com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponseStatus status = 1;</code>
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        status_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponseStatus.SUCCESS;
+        onChanged();
+        return this;
+      }
+
+      // optional string hint = 2;
+      private java.lang.Object hint_ = "";
+      /**
+       * <code>optional string hint = 2;</code>
+       */
+      public boolean hasHint() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string hint = 2;</code>
+       */
+      public java.lang.String getHint() {
+        java.lang.Object ref = hint_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          hint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string hint = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHintBytes() {
+        java.lang.Object ref = hint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string hint = 2;</code>
+       */
+      public Builder setHint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        hint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string hint = 2;</code>
+       */
+      public Builder clearHint() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hint_ = getDefaultInstance().getHint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string hint = 2;</code>
+       */
+      public Builder setHintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        hint_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.EtResponse)
+    }
+
+    static {
+      defaultInstance = new EtResponse(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.EtResponse)
+  }
+
+  public interface Et1001OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required string username = 1;
+    /**
+     * <code>required string username = 1;</code>
+     */
+    boolean hasUsername();
+    /**
+     * <code>required string username = 1;</code>
+     */
+    java.lang.String getUsername();
+    /**
+     * <code>required string username = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getUsernameBytes();
+
+    // required string password = 2;
+    /**
+     * <code>required string password = 2;</code>
+     */
+    boolean hasPassword();
+    /**
+     * <code>required string password = 2;</code>
+     */
+    java.lang.String getPassword();
+    /**
+     * <code>required string password = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getPasswordBytes();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et1001}
+   *
+   * <pre>
+   *login
+   * </pre>
+   */
+  public static final class Et1001 extends
+      com.google.protobuf.GeneratedMessage
+      implements Et1001OrBuilder {
+    // Use Et1001.newBuilder() to construct.
+    private Et1001(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et1001(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et1001 defaultInstance;
+    public static Et1001 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et1001 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et1001(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              username_ = input.readBytes();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              password_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1001.class, com.taoeaten.et.protobuf.CommandProtobuf.Et1001.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et1001> PARSER =
+        new com.google.protobuf.AbstractParser<Et1001>() {
+      public Et1001 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et1001(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et1001> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required string username = 1;
+    public static final int USERNAME_FIELD_NUMBER = 1;
+    private java.lang.Object username_;
+    /**
+     * <code>required string username = 1;</code>
+     */
+    public boolean hasUsername() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string username = 1;</code>
+     */
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          username_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string username = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // required string password = 2;
+    public static final int PASSWORD_FIELD_NUMBER = 2;
+    private java.lang.Object password_;
+    /**
+     * <code>required string password = 2;</code>
+     */
+    public boolean hasPassword() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string password = 2;</code>
+     */
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          password_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string password = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      username_ = "";
+      password_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUsername()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPassword()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getUsernameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getPasswordBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getUsernameBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getPasswordBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et1001 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et1001}
+     *
+     * <pre>
+     *login
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et1001OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et1001.class, com.taoeaten.et.protobuf.CommandProtobuf.Et1001.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et1001.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        username_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        password_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001 getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et1001.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001 build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1001 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001 buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1001 result = new com.taoeaten.et.protobuf.CommandProtobuf.Et1001(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.username_ = username_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.password_ = password_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et1001) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et1001)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et1001 other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et1001.getDefaultInstance()) return this;
+        if (other.hasUsername()) {
+          bitField0_ |= 0x00000001;
+          username_ = other.username_;
+          onChanged();
+        }
+        if (other.hasPassword()) {
+          bitField0_ |= 0x00000002;
+          password_ = other.password_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUsername()) {
+          
+          return false;
+        }
+        if (!hasPassword()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1001 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et1001) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required string username = 1;
+      private java.lang.Object username_ = "";
+      /**
+       * <code>required string username = 1;</code>
+       */
+      public boolean hasUsername() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string username = 1;</code>
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string username = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string username = 1;</code>
+       */
+      public Builder setUsername(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        username_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string username = 1;</code>
+       */
+      public Builder clearUsername() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        username_ = getDefaultInstance().getUsername();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string username = 1;</code>
+       */
+      public Builder setUsernameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        username_ = value;
+        onChanged();
+        return this;
+      }
+
+      // required string password = 2;
+      private java.lang.Object password_ = "";
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public boolean hasPassword() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public Builder setPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public Builder clearPassword() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string password = 2;</code>
+       */
+      public Builder setPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et1001)
+    }
+
+    static {
+      defaultInstance = new Et1001(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et1001)
+  }
+
+  public interface Et1001ROrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    boolean hasResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et1001R}
+   */
+  public static final class Et1001R extends
+      com.google.protobuf.GeneratedMessage
+      implements Et1001ROrBuilder {
+    // Use Et1001R.newBuilder() to construct.
+    private Et1001R(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et1001R(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et1001R defaultInstance;
+    public static Et1001R getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et1001R getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et1001R(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001R_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001R_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et1001R> PARSER =
+        new com.google.protobuf.AbstractParser<Et1001R>() {
+      public Et1001R parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et1001R(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et1001R> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+      return response_;
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+      return response_;
+    }
+
+    private void initFields() {
+      response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasResponse()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getResponse().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, response_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, response_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et1001R prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et1001R}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et1001ROrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001R_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001R_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1001R_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001R getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001R build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1001R result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001R buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1001R result = new com.taoeaten.et.protobuf.CommandProtobuf.Et1001R(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (responseBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = responseBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et1001R) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et1001R)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et1001R other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasResponse()) {
+          
+          return false;
+        }
+        if (!getResponse().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1001R parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et1001R) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder mergeResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              response_ != com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance()) {
+            response_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_;
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder>(
+                  response_,
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et1001R)
+    }
+
+    static {
+      defaultInstance = new Et1001R(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et1001R)
+  }
+
+  public interface Et1002OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 userId = 1;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    boolean hasUserId();
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    int getUserId();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et1002}
+   *
+   * <pre>
+   *logout
+   * </pre>
+   */
+  public static final class Et1002 extends
+      com.google.protobuf.GeneratedMessage
+      implements Et1002OrBuilder {
+    // Use Et1002.newBuilder() to construct.
+    private Et1002(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et1002(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et1002 defaultInstance;
+    public static Et1002 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et1002 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et1002(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1002.class, com.taoeaten.et.protobuf.CommandProtobuf.Et1002.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et1002> PARSER =
+        new com.google.protobuf.AbstractParser<Et1002>() {
+      public Et1002 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et1002(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et1002> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 userId = 1;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userId_;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public boolean hasUserId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public int getUserId() {
+      return userId_;
+    }
+
+    private void initFields() {
+      userId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUserId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, userId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et1002 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et1002}
+     *
+     * <pre>
+     *logout
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et1002OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et1002.class, com.taoeaten.et.protobuf.CommandProtobuf.Et1002.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et1002.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002 getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et1002.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002 build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1002 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002 buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1002 result = new com.taoeaten.et.protobuf.CommandProtobuf.Et1002(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userId_ = userId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et1002) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et1002)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et1002 other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et1002.getDefaultInstance()) return this;
+        if (other.hasUserId()) {
+          setUserId(other.getUserId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUserId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1002 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et1002) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 userId = 1;
+      private int userId_ ;
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public boolean hasUserId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public int getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder setUserId(int value) {
+        bitField0_ |= 0x00000001;
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder clearUserId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et1002)
+    }
+
+    static {
+      defaultInstance = new Et1002(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et1002)
+  }
+
+  public interface Et1002ROrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    boolean hasResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et1002R}
+   */
+  public static final class Et1002R extends
+      com.google.protobuf.GeneratedMessage
+      implements Et1002ROrBuilder {
+    // Use Et1002R.newBuilder() to construct.
+    private Et1002R(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et1002R(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et1002R defaultInstance;
+    public static Et1002R getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et1002R getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et1002R(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002R_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002R_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et1002R> PARSER =
+        new com.google.protobuf.AbstractParser<Et1002R>() {
+      public Et1002R parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et1002R(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et1002R> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+      return response_;
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+      return response_;
+    }
+
+    private void initFields() {
+      response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasResponse()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getResponse().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, response_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, response_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et1002R prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et1002R}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et1002ROrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002R_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002R_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et1002R_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002R getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002R build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1002R result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002R buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1002R result = new com.taoeaten.et.protobuf.CommandProtobuf.Et1002R(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (responseBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = responseBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et1002R) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et1002R)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et1002R other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasResponse()) {
+          
+          return false;
+        }
+        if (!getResponse().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et1002R parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et1002R) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder mergeResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              response_ != com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance()) {
+            response_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_;
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder>(
+                  response_,
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et1002R)
+    }
+
+    static {
+      defaultInstance = new Et1002R(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et1002R)
+  }
+
+  public interface Et2001OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et2001}
+   *
+   * <pre>
+   *get room list
+   * </pre>
+   */
+  public static final class Et2001 extends
+      com.google.protobuf.GeneratedMessage
+      implements Et2001OrBuilder {
+    // Use Et2001.newBuilder() to construct.
+    private Et2001(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et2001(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et2001 defaultInstance;
+    public static Et2001 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et2001 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et2001(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et2001.class, com.taoeaten.et.protobuf.CommandProtobuf.Et2001.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et2001> PARSER =
+        new com.google.protobuf.AbstractParser<Et2001>() {
+      public Et2001 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et2001(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et2001> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et2001 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et2001}
+     *
+     * <pre>
+     *get room list
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et2001OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et2001.class, com.taoeaten.et.protobuf.CommandProtobuf.Et2001.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et2001.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001 getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et2001.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001 build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et2001 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001 buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et2001 result = new com.taoeaten.et.protobuf.CommandProtobuf.Et2001(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et2001) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et2001)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et2001 other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et2001.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et2001 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et2001) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et2001)
+    }
+
+    static {
+      defaultInstance = new Et2001(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et2001)
+  }
+
+  public interface Et2001ROrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    boolean hasResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder();
+
+    // repeated .com.taoeaten.et.protobuf.Room rooms = 2;
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> 
+        getRoomsList();
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Room getRooms(int index);
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    int getRoomsCount();
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    java.util.List<? extends com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> 
+        getRoomsOrBuilderList();
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder getRoomsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et2001R}
+   */
+  public static final class Et2001R extends
+      com.google.protobuf.GeneratedMessage
+      implements Et2001ROrBuilder {
+    // Use Et2001R.newBuilder() to construct.
+    private Et2001R(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et2001R(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et2001R defaultInstance;
+    public static Et2001R getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et2001R getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et2001R(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                rooms_ = new java.util.ArrayList<com.taoeaten.et.protobuf.CommandProtobuf.Room>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              rooms_.add(input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Room.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          rooms_ = java.util.Collections.unmodifiableList(rooms_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001R_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001R_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et2001R> PARSER =
+        new com.google.protobuf.AbstractParser<Et2001R>() {
+      public Et2001R parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et2001R(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et2001R> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+      return response_;
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+      return response_;
+    }
+
+    // repeated .com.taoeaten.et.protobuf.Room rooms = 2;
+    public static final int ROOMS_FIELD_NUMBER = 2;
+    private java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> rooms_;
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    public java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> getRoomsList() {
+      return rooms_;
+    }
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    public java.util.List<? extends com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> 
+        getRoomsOrBuilderList() {
+      return rooms_;
+    }
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    public int getRoomsCount() {
+      return rooms_.size();
+    }
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Room getRooms(int index) {
+      return rooms_.get(index);
+    }
+    /**
+     * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder getRoomsOrBuilder(
+        int index) {
+      return rooms_.get(index);
+    }
+
+    private void initFields() {
+      response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+      rooms_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasResponse()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getResponse().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      for (int i = 0; i < getRoomsCount(); i++) {
+        if (!getRooms(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, response_);
+      }
+      for (int i = 0; i < rooms_.size(); i++) {
+        output.writeMessage(2, rooms_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, response_);
+      }
+      for (int i = 0; i < rooms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, rooms_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et2001R prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et2001R}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et2001ROrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001R_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001R_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+          getRoomsFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (roomsBuilder_ == null) {
+          rooms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          roomsBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et2001R_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001R getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001R build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et2001R result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001R buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et2001R result = new com.taoeaten.et.protobuf.CommandProtobuf.Et2001R(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (responseBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = responseBuilder_.build();
+        }
+        if (roomsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            rooms_ = java.util.Collections.unmodifiableList(rooms_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.rooms_ = rooms_;
+        } else {
+          result.rooms_ = roomsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et2001R) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et2001R)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et2001R other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        if (roomsBuilder_ == null) {
+          if (!other.rooms_.isEmpty()) {
+            if (rooms_.isEmpty()) {
+              rooms_ = other.rooms_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRoomsIsMutable();
+              rooms_.addAll(other.rooms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rooms_.isEmpty()) {
+            if (roomsBuilder_.isEmpty()) {
+              roomsBuilder_.dispose();
+              roomsBuilder_ = null;
+              rooms_ = other.rooms_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              roomsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getRoomsFieldBuilder() : null;
+            } else {
+              roomsBuilder_.addAllMessages(other.rooms_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasResponse()) {
+          
+          return false;
+        }
+        if (!getResponse().isInitialized()) {
+          
+          return false;
+        }
+        for (int i = 0; i < getRoomsCount(); i++) {
+          if (!getRooms(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et2001R parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et2001R) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder mergeResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              response_ != com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance()) {
+            response_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_;
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder>(
+                  response_,
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+
+      // repeated .com.taoeaten.et.protobuf.Room rooms = 2;
+      private java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> rooms_ =
+        java.util.Collections.emptyList();
+      private void ensureRoomsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          rooms_ = new java.util.ArrayList<com.taoeaten.et.protobuf.CommandProtobuf.Room>(rooms_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Room, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder, com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> roomsBuilder_;
+
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room> getRoomsList() {
+        if (roomsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rooms_);
+        } else {
+          return roomsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public int getRoomsCount() {
+        if (roomsBuilder_ == null) {
+          return rooms_.size();
+        } else {
+          return roomsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Room getRooms(int index) {
+        if (roomsBuilder_ == null) {
+          return rooms_.get(index);
+        } else {
+          return roomsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public Builder setRooms(
+          int index, com.taoeaten.et.protobuf.CommandProtobuf.Room value) {
+        if (roomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoomsIsMutable();
+          rooms_.set(index, value);
+          onChanged();
+        } else {
+          roomsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public Builder setRooms(
+          int index, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder builderForValue) {
+        if (roomsBuilder_ == null) {
+          ensureRoomsIsMutable();
+          rooms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          roomsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public Builder addRooms(com.taoeaten.et.protobuf.CommandProtobuf.Room value) {
+        if (roomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoomsIsMutable();
+          rooms_.add(value);
+          onChanged();
+        } else {
+          roomsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public Builder addRooms(
+          int index, com.taoeaten.et.protobuf.CommandProtobuf.Room value) {
+        if (roomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoomsIsMutable();
+          rooms_.add(index, value);
+          onChanged();
+        } else {
+          roomsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public Builder addRooms(
+          com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder builderForValue) {
+        if (roomsBuilder_ == null) {
+          ensureRoomsIsMutable();
+          rooms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          roomsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public Builder addRooms(
+          int index, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder builderForValue) {
+        if (roomsBuilder_ == null) {
+          ensureRoomsIsMutable();
+          rooms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          roomsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public Builder addAllRooms(
+          java.lang.Iterable<? extends com.taoeaten.et.protobuf.CommandProtobuf.Room> values) {
+        if (roomsBuilder_ == null) {
+          ensureRoomsIsMutable();
+          super.addAll(values, rooms_);
+          onChanged();
+        } else {
+          roomsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public Builder clearRooms() {
+        if (roomsBuilder_ == null) {
+          rooms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          roomsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public Builder removeRooms(int index) {
+        if (roomsBuilder_ == null) {
+          ensureRoomsIsMutable();
+          rooms_.remove(index);
+          onChanged();
+        } else {
+          roomsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder getRoomsBuilder(
+          int index) {
+        return getRoomsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder getRoomsOrBuilder(
+          int index) {
+        if (roomsBuilder_ == null) {
+          return rooms_.get(index);  } else {
+          return roomsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public java.util.List<? extends com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> 
+           getRoomsOrBuilderList() {
+        if (roomsBuilder_ != null) {
+          return roomsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rooms_);
+        }
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder addRoomsBuilder() {
+        return getRoomsFieldBuilder().addBuilder(
+            com.taoeaten.et.protobuf.CommandProtobuf.Room.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder addRoomsBuilder(
+          int index) {
+        return getRoomsFieldBuilder().addBuilder(
+            index, com.taoeaten.et.protobuf.CommandProtobuf.Room.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.taoeaten.et.protobuf.Room rooms = 2;</code>
+       */
+      public java.util.List<com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder> 
+           getRoomsBuilderList() {
+        return getRoomsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Room, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder, com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder> 
+          getRoomsFieldBuilder() {
+        if (roomsBuilder_ == null) {
+          roomsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Room, com.taoeaten.et.protobuf.CommandProtobuf.Room.Builder, com.taoeaten.et.protobuf.CommandProtobuf.RoomOrBuilder>(
+                  rooms_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          rooms_ = null;
+        }
+        return roomsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et2001R)
+    }
+
+    static {
+      defaultInstance = new Et2001R(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et2001R)
+  }
+
+  public interface Et3001OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 userId = 1;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    boolean hasUserId();
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    int getUserId();
+
+    // required int32 roomId = 2;
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    boolean hasRoomId();
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    int getRoomId();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et3001}
+   *
+   * <pre>
+   *join the room
+   * </pre>
+   */
+  public static final class Et3001 extends
+      com.google.protobuf.GeneratedMessage
+      implements Et3001OrBuilder {
+    // Use Et3001.newBuilder() to construct.
+    private Et3001(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et3001(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et3001 defaultInstance;
+    public static Et3001 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et3001 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et3001(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              roomId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3001.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3001.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et3001> PARSER =
+        new com.google.protobuf.AbstractParser<Et3001>() {
+      public Et3001 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et3001(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et3001> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 userId = 1;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userId_;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public boolean hasUserId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public int getUserId() {
+      return userId_;
+    }
+
+    // required int32 roomId = 2;
+    public static final int ROOMID_FIELD_NUMBER = 2;
+    private int roomId_;
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    public boolean hasRoomId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    public int getRoomId() {
+      return roomId_;
+    }
+
+    private void initFields() {
+      userId_ = 0;
+      roomId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUserId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRoomId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, userId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, roomId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, roomId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et3001 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et3001}
+     *
+     * <pre>
+     *join the room
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et3001OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et3001.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3001.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et3001.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        roomId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001 getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et3001.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001 build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3001 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001 buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3001 result = new com.taoeaten.et.protobuf.CommandProtobuf.Et3001(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userId_ = userId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.roomId_ = roomId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et3001) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et3001)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et3001 other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et3001.getDefaultInstance()) return this;
+        if (other.hasUserId()) {
+          setUserId(other.getUserId());
+        }
+        if (other.hasRoomId()) {
+          setRoomId(other.getRoomId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUserId()) {
+          
+          return false;
+        }
+        if (!hasRoomId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3001 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et3001) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 userId = 1;
+      private int userId_ ;
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public boolean hasUserId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public int getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder setUserId(int value) {
+        bitField0_ |= 0x00000001;
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder clearUserId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 roomId = 2;
+      private int roomId_ ;
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public boolean hasRoomId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public int getRoomId() {
+        return roomId_;
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public Builder setRoomId(int value) {
+        bitField0_ |= 0x00000002;
+        roomId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public Builder clearRoomId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        roomId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et3001)
+    }
+
+    static {
+      defaultInstance = new Et3001(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et3001)
+  }
+
+  public interface Et3001ROrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    boolean hasResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et3001R}
+   */
+  public static final class Et3001R extends
+      com.google.protobuf.GeneratedMessage
+      implements Et3001ROrBuilder {
+    // Use Et3001R.newBuilder() to construct.
+    private Et3001R(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et3001R(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et3001R defaultInstance;
+    public static Et3001R getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et3001R getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et3001R(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001R_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001R_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et3001R> PARSER =
+        new com.google.protobuf.AbstractParser<Et3001R>() {
+      public Et3001R parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et3001R(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et3001R> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+      return response_;
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+      return response_;
+    }
+
+    private void initFields() {
+      response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasResponse()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getResponse().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, response_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, response_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et3001R prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et3001R}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et3001ROrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001R_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001R_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3001R_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001R getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001R build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3001R result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001R buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3001R result = new com.taoeaten.et.protobuf.CommandProtobuf.Et3001R(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (responseBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = responseBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et3001R) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et3001R)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et3001R other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasResponse()) {
+          
+          return false;
+        }
+        if (!getResponse().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3001R parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et3001R) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder mergeResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              response_ != com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance()) {
+            response_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_;
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder>(
+                  response_,
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et3001R)
+    }
+
+    static {
+      defaultInstance = new Et3001R(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et3001R)
+  }
+
+  public interface Et3002OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 userId = 1;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    boolean hasUserId();
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    int getUserId();
+
+    // required int32 roomId = 2;
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    boolean hasRoomId();
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    int getRoomId();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et3002}
+   *
+   * <pre>
+   *leave the room
+   * </pre>
+   */
+  public static final class Et3002 extends
+      com.google.protobuf.GeneratedMessage
+      implements Et3002OrBuilder {
+    // Use Et3002.newBuilder() to construct.
+    private Et3002(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et3002(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et3002 defaultInstance;
+    public static Et3002 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et3002 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et3002(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              roomId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3002.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3002.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et3002> PARSER =
+        new com.google.protobuf.AbstractParser<Et3002>() {
+      public Et3002 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et3002(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et3002> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 userId = 1;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userId_;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public boolean hasUserId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public int getUserId() {
+      return userId_;
+    }
+
+    // required int32 roomId = 2;
+    public static final int ROOMID_FIELD_NUMBER = 2;
+    private int roomId_;
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    public boolean hasRoomId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    public int getRoomId() {
+      return roomId_;
+    }
+
+    private void initFields() {
+      userId_ = 0;
+      roomId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUserId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRoomId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, userId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, roomId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, roomId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et3002 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et3002}
+     *
+     * <pre>
+     *leave the room
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et3002OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et3002.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3002.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et3002.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        roomId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002 getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et3002.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002 build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3002 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002 buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3002 result = new com.taoeaten.et.protobuf.CommandProtobuf.Et3002(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userId_ = userId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.roomId_ = roomId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et3002) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et3002)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et3002 other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et3002.getDefaultInstance()) return this;
+        if (other.hasUserId()) {
+          setUserId(other.getUserId());
+        }
+        if (other.hasRoomId()) {
+          setRoomId(other.getRoomId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUserId()) {
+          
+          return false;
+        }
+        if (!hasRoomId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3002 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et3002) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 userId = 1;
+      private int userId_ ;
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public boolean hasUserId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public int getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder setUserId(int value) {
+        bitField0_ |= 0x00000001;
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder clearUserId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 roomId = 2;
+      private int roomId_ ;
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public boolean hasRoomId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public int getRoomId() {
+        return roomId_;
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public Builder setRoomId(int value) {
+        bitField0_ |= 0x00000002;
+        roomId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public Builder clearRoomId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        roomId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et3002)
+    }
+
+    static {
+      defaultInstance = new Et3002(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et3002)
+  }
+
+  public interface Et3002ROrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    boolean hasResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et3002R}
+   */
+  public static final class Et3002R extends
+      com.google.protobuf.GeneratedMessage
+      implements Et3002ROrBuilder {
+    // Use Et3002R.newBuilder() to construct.
+    private Et3002R(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et3002R(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et3002R defaultInstance;
+    public static Et3002R getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et3002R getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et3002R(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002R_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002R_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et3002R> PARSER =
+        new com.google.protobuf.AbstractParser<Et3002R>() {
+      public Et3002R parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et3002R(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et3002R> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+      return response_;
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+      return response_;
+    }
+
+    private void initFields() {
+      response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasResponse()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getResponse().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, response_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, response_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et3002R prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et3002R}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et3002ROrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002R_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002R_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3002R_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002R getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002R build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3002R result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002R buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3002R result = new com.taoeaten.et.protobuf.CommandProtobuf.Et3002R(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (responseBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = responseBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et3002R) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et3002R)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et3002R other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasResponse()) {
+          
+          return false;
+        }
+        if (!getResponse().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3002R parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et3002R) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder mergeResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              response_ != com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance()) {
+            response_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_;
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder>(
+                  response_,
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et3002R)
+    }
+
+    static {
+      defaultInstance = new Et3002R(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et3002R)
+  }
+
+  public interface Et3003OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 userId = 1;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    boolean hasUserId();
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    int getUserId();
+
+    // required int32 roomId = 2;
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    boolean hasRoomId();
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    int getRoomId();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et3003}
+   *
+   * <pre>
+   *ready
+   * </pre>
+   */
+  public static final class Et3003 extends
+      com.google.protobuf.GeneratedMessage
+      implements Et3003OrBuilder {
+    // Use Et3003.newBuilder() to construct.
+    private Et3003(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et3003(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et3003 defaultInstance;
+    public static Et3003 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et3003 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et3003(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              roomId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3003.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3003.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et3003> PARSER =
+        new com.google.protobuf.AbstractParser<Et3003>() {
+      public Et3003 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et3003(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et3003> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 userId = 1;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userId_;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public boolean hasUserId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public int getUserId() {
+      return userId_;
+    }
+
+    // required int32 roomId = 2;
+    public static final int ROOMID_FIELD_NUMBER = 2;
+    private int roomId_;
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    public boolean hasRoomId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    public int getRoomId() {
+      return roomId_;
+    }
+
+    private void initFields() {
+      userId_ = 0;
+      roomId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUserId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRoomId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, userId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, roomId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, roomId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et3003 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et3003}
+     *
+     * <pre>
+     *ready
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et3003OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et3003.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3003.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et3003.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        roomId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003 getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et3003.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003 build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3003 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003 buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3003 result = new com.taoeaten.et.protobuf.CommandProtobuf.Et3003(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userId_ = userId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.roomId_ = roomId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et3003) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et3003)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et3003 other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et3003.getDefaultInstance()) return this;
+        if (other.hasUserId()) {
+          setUserId(other.getUserId());
+        }
+        if (other.hasRoomId()) {
+          setRoomId(other.getRoomId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUserId()) {
+          
+          return false;
+        }
+        if (!hasRoomId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3003 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et3003) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 userId = 1;
+      private int userId_ ;
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public boolean hasUserId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public int getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder setUserId(int value) {
+        bitField0_ |= 0x00000001;
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder clearUserId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 roomId = 2;
+      private int roomId_ ;
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public boolean hasRoomId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public int getRoomId() {
+        return roomId_;
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public Builder setRoomId(int value) {
+        bitField0_ |= 0x00000002;
+        roomId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public Builder clearRoomId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        roomId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et3003)
+    }
+
+    static {
+      defaultInstance = new Et3003(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et3003)
+  }
+
+  public interface Et3003ROrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    boolean hasResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et3003R}
+   */
+  public static final class Et3003R extends
+      com.google.protobuf.GeneratedMessage
+      implements Et3003ROrBuilder {
+    // Use Et3003R.newBuilder() to construct.
+    private Et3003R(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et3003R(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et3003R defaultInstance;
+    public static Et3003R getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et3003R getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et3003R(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003R_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003R_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et3003R> PARSER =
+        new com.google.protobuf.AbstractParser<Et3003R>() {
+      public Et3003R parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et3003R(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et3003R> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+      return response_;
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+      return response_;
+    }
+
+    private void initFields() {
+      response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasResponse()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getResponse().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, response_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, response_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et3003R prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et3003R}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et3003ROrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003R_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003R_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3003R_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003R getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003R build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3003R result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003R buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3003R result = new com.taoeaten.et.protobuf.CommandProtobuf.Et3003R(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (responseBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = responseBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et3003R) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et3003R)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et3003R other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasResponse()) {
+          
+          return false;
+        }
+        if (!getResponse().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3003R parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et3003R) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder mergeResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              response_ != com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance()) {
+            response_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_;
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder>(
+                  response_,
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et3003R)
+    }
+
+    static {
+      defaultInstance = new Et3003R(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et3003R)
+  }
+
+  public interface Et3004OrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 userId = 1;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    boolean hasUserId();
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    int getUserId();
+
+    // required int32 roomId = 2;
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    boolean hasRoomId();
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    int getRoomId();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et3004}
+   *
+   * <pre>
+   *start the game
+   * </pre>
+   */
+  public static final class Et3004 extends
+      com.google.protobuf.GeneratedMessage
+      implements Et3004OrBuilder {
+    // Use Et3004.newBuilder() to construct.
+    private Et3004(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et3004(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et3004 defaultInstance;
+    public static Et3004 getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et3004 getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et3004(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              roomId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3004.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3004.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et3004> PARSER =
+        new com.google.protobuf.AbstractParser<Et3004>() {
+      public Et3004 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et3004(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et3004> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 userId = 1;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userId_;
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public boolean hasUserId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 userId = 1;</code>
+     */
+    public int getUserId() {
+      return userId_;
+    }
+
+    // required int32 roomId = 2;
+    public static final int ROOMID_FIELD_NUMBER = 2;
+    private int roomId_;
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    public boolean hasRoomId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required int32 roomId = 2;</code>
+     */
+    public int getRoomId() {
+      return roomId_;
+    }
+
+    private void initFields() {
+      userId_ = 0;
+      roomId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUserId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRoomId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, userId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, roomId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, roomId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et3004 prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et3004}
+     *
+     * <pre>
+     *start the game
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et3004OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et3004.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3004.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et3004.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        roomId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004 getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et3004.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004 build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3004 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004 buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3004 result = new com.taoeaten.et.protobuf.CommandProtobuf.Et3004(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userId_ = userId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.roomId_ = roomId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et3004) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et3004)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et3004 other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et3004.getDefaultInstance()) return this;
+        if (other.hasUserId()) {
+          setUserId(other.getUserId());
+        }
+        if (other.hasRoomId()) {
+          setRoomId(other.getRoomId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUserId()) {
+          
+          return false;
+        }
+        if (!hasRoomId()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3004 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et3004) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 userId = 1;
+      private int userId_ ;
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public boolean hasUserId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public int getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder setUserId(int value) {
+        bitField0_ |= 0x00000001;
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 userId = 1;</code>
+       */
+      public Builder clearUserId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required int32 roomId = 2;
+      private int roomId_ ;
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public boolean hasRoomId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public int getRoomId() {
+        return roomId_;
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public Builder setRoomId(int value) {
+        bitField0_ |= 0x00000002;
+        roomId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 roomId = 2;</code>
+       */
+      public Builder clearRoomId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        roomId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et3004)
+    }
+
+    static {
+      defaultInstance = new Et3004(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et3004)
+  }
+
+  public interface Et3004ROrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    boolean hasResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.Et3004R}
+   */
+  public static final class Et3004R extends
+      com.google.protobuf.GeneratedMessage
+      implements Et3004ROrBuilder {
+    // Use Et3004R.newBuilder() to construct.
+    private Et3004R(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Et3004R(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Et3004R defaultInstance;
+    public static Et3004R getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Et3004R getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Et3004R(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = response_.toBuilder();
+              }
+              response_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(response_);
+                response_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004R_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004R_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Et3004R> PARSER =
+        new com.google.protobuf.AbstractParser<Et3004R>() {
+      public Et3004R parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Et3004R(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Et3004R> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+      return response_;
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+      return response_;
+    }
+
+    private void initFields() {
+      response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasResponse()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getResponse().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, response_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, response_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.Et3004R prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.Et3004R}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.Et3004ROrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004R_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004R_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.class, com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getResponseFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_Et3004R_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004R getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004R build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3004R result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004R buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3004R result = new com.taoeaten.et.protobuf.CommandProtobuf.Et3004R(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (responseBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = responseBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.Et3004R) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.Et3004R)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.Et3004R other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasResponse()) {
+          
+          return false;
+        }
+        if (!getResponse().isInitialized()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.Et3004R parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.Et3004R) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtResponse response = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtResponse response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse getResponse() {
+        if (responseBuilder_ == null) {
+          return response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder setResponse(
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+          onChanged();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder mergeResponse(com.taoeaten.et.protobuf.CommandProtobuf.EtResponse value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              response_ != com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance()) {
+            response_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+          } else {
+            response_ = value;
+          }
+          onChanged();
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public Builder clearResponse() {
+        if (responseBuilder_ == null) {
+          response_ = com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.getDefaultInstance();
+          onChanged();
+        } else {
+          responseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_;
+        }
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtResponse response = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.EtResponse, com.taoeaten.et.protobuf.CommandProtobuf.EtResponse.Builder, com.taoeaten.et.protobuf.CommandProtobuf.EtResponseOrBuilder>(
+                  response_,
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.Et3004R)
+    }
+
+    static {
+      defaultInstance = new Et3004R(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.Et3004R)
+  }
+
+  public interface EtMessageOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtMessageType type = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtMessageType type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtMessageType type = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType getType();
+
+    // optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+     */
+    boolean hasEt1001();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et1001 getEt1001();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et1001OrBuilder getEt1001OrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+     */
+    boolean hasEt1002();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et1002 getEt1002();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et1002OrBuilder getEt1002OrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+     */
+    boolean hasEt2001();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et2001 getEt2001();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et2001OrBuilder getEt2001OrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+     */
+    boolean hasEt3001();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3001 getEt3001();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3001OrBuilder getEt3001OrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+     */
+    boolean hasEt3002();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3002 getEt3002();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3002OrBuilder getEt3002OrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+     */
+    boolean hasEt3003();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3003 getEt3003();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3003OrBuilder getEt3003OrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+     */
+    boolean hasEt3004();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3004 getEt3004();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3004OrBuilder getEt3004OrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.EtMessage}
+   *
+   * <pre>
+   **
+   * </pre>
+   */
+  public static final class EtMessage extends
+      com.google.protobuf.GeneratedMessage
+      implements EtMessageOrBuilder {
+    // Use EtMessage.newBuilder() to construct.
+    private EtMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private EtMessage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final EtMessage defaultInstance;
+    public static EtMessage getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public EtMessage getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EtMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType value = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                type_ = value;
+              }
+              break;
+            }
+            case 18: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1001.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = et1001_.toBuilder();
+              }
+              et1001_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et1001.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et1001_);
+                et1001_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1002.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = et1002_.toBuilder();
+              }
+              et1002_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et1002.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et1002_);
+                et1002_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et2001.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = et2001_.toBuilder();
+              }
+              et2001_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et2001.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et2001_);
+                et2001_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3001.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = et3001_.toBuilder();
+              }
+              et3001_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et3001.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et3001_);
+                et3001_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 50: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3002.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = et3002_.toBuilder();
+              }
+              et3002_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et3002.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et3002_);
+                et3002_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 58: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3003.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = et3003_.toBuilder();
+              }
+              et3003_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et3003.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et3003_);
+                et3003_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+            case 66: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3004.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = et3004_.toBuilder();
+              }
+              et3004_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et3004.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et3004_);
+                et3004_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.EtMessage.class, com.taoeaten.et.protobuf.CommandProtobuf.EtMessage.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<EtMessage> PARSER =
+        new com.google.protobuf.AbstractParser<EtMessage>() {
+      public EtMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EtMessage(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EtMessage> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtMessageType type = 1;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType type_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtMessageType type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtMessageType type = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType getType() {
+      return type_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;
+    public static final int ET1001_FIELD_NUMBER = 2;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et1001 et1001_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+     */
+    public boolean hasEt1001() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et1001 getEt1001() {
+      return et1001_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et1001OrBuilder getEt1001OrBuilder() {
+      return et1001_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;
+    public static final int ET1002_FIELD_NUMBER = 3;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et1002 et1002_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+     */
+    public boolean hasEt1002() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et1002 getEt1002() {
+      return et1002_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et1002OrBuilder getEt1002OrBuilder() {
+      return et1002_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;
+    public static final int ET2001_FIELD_NUMBER = 4;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et2001 et2001_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+     */
+    public boolean hasEt2001() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et2001 getEt2001() {
+      return et2001_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et2001OrBuilder getEt2001OrBuilder() {
+      return et2001_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;
+    public static final int ET3001_FIELD_NUMBER = 5;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et3001 et3001_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+     */
+    public boolean hasEt3001() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3001 getEt3001() {
+      return et3001_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3001OrBuilder getEt3001OrBuilder() {
+      return et3001_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;
+    public static final int ET3002_FIELD_NUMBER = 6;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et3002 et3002_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+     */
+    public boolean hasEt3002() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3002 getEt3002() {
+      return et3002_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3002OrBuilder getEt3002OrBuilder() {
+      return et3002_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;
+    public static final int ET3003_FIELD_NUMBER = 7;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et3003 et3003_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+     */
+    public boolean hasEt3003() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3003 getEt3003() {
+      return et3003_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3003OrBuilder getEt3003OrBuilder() {
+      return et3003_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;
+    public static final int ET3004_FIELD_NUMBER = 8;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et3004 et3004_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+     */
+    public boolean hasEt3004() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3004 getEt3004() {
+      return et3004_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3004OrBuilder getEt3004OrBuilder() {
+      return et3004_;
+    }
+
+    private void initFields() {
+      type_ = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType.Tet1001;
+      et1001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1001.getDefaultInstance();
+      et1002_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1002.getDefaultInstance();
+      et2001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et2001.getDefaultInstance();
+      et3001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3001.getDefaultInstance();
+      et3002_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3002.getDefaultInstance();
+      et3003_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3003.getDefaultInstance();
+      et3004_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3004.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasEt1001()) {
+        if (!getEt1001().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt1002()) {
+        if (!getEt1002().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt3001()) {
+        if (!getEt3001().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt3002()) {
+        if (!getEt3002().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt3003()) {
+        if (!getEt3003().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt3004()) {
+        if (!getEt3004().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, et1001_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, et1002_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, et2001_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, et3001_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(6, et3002_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(7, et3003_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(8, et3004_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, et1001_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, et1002_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, et2001_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, et3001_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, et3002_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, et3003_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, et3004_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.EtMessage prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.EtMessage}
+     *
+     * <pre>
+     **
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.EtMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.EtMessage.class, com.taoeaten.et.protobuf.CommandProtobuf.EtMessage.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.EtMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getEt1001FieldBuilder();
+          getEt1002FieldBuilder();
+          getEt2001FieldBuilder();
+          getEt3001FieldBuilder();
+          getEt3002FieldBuilder();
+          getEt3003FieldBuilder();
+          getEt3004FieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        type_ = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType.Tet1001;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (et1001Builder_ == null) {
+          et1001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1001.getDefaultInstance();
+        } else {
+          et1001Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (et1002Builder_ == null) {
+          et1002_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1002.getDefaultInstance();
+        } else {
+          et1002Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (et2001Builder_ == null) {
+          et2001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et2001.getDefaultInstance();
+        } else {
+          et2001Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (et3001Builder_ == null) {
+          et3001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3001.getDefaultInstance();
+        } else {
+          et3001Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (et3002Builder_ == null) {
+          et3002_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3002.getDefaultInstance();
+        } else {
+          et3002Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (et3003Builder_ == null) {
+          et3003_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3003.getDefaultInstance();
+        } else {
+          et3003Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (et3004Builder_ == null) {
+          et3004_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3004.getDefaultInstance();
+        } else {
+          et3004Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessage_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtMessage getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.EtMessage.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtMessage build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.EtMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtMessage buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.EtMessage result = new com.taoeaten.et.protobuf.CommandProtobuf.EtMessage(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (et1001Builder_ == null) {
+          result.et1001_ = et1001_;
+        } else {
+          result.et1001_ = et1001Builder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (et1002Builder_ == null) {
+          result.et1002_ = et1002_;
+        } else {
+          result.et1002_ = et1002Builder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (et2001Builder_ == null) {
+          result.et2001_ = et2001_;
+        } else {
+          result.et2001_ = et2001Builder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (et3001Builder_ == null) {
+          result.et3001_ = et3001_;
+        } else {
+          result.et3001_ = et3001Builder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (et3002Builder_ == null) {
+          result.et3002_ = et3002_;
+        } else {
+          result.et3002_ = et3002Builder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        if (et3003Builder_ == null) {
+          result.et3003_ = et3003_;
+        } else {
+          result.et3003_ = et3003Builder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        if (et3004Builder_ == null) {
+          result.et3004_ = et3004_;
+        } else {
+          result.et3004_ = et3004Builder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.EtMessage) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.EtMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.EtMessage other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.EtMessage.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasEt1001()) {
+          mergeEt1001(other.getEt1001());
+        }
+        if (other.hasEt1002()) {
+          mergeEt1002(other.getEt1002());
+        }
+        if (other.hasEt2001()) {
+          mergeEt2001(other.getEt2001());
+        }
+        if (other.hasEt3001()) {
+          mergeEt3001(other.getEt3001());
+        }
+        if (other.hasEt3002()) {
+          mergeEt3002(other.getEt3002());
+        }
+        if (other.hasEt3003()) {
+          mergeEt3003(other.getEt3003());
+        }
+        if (other.hasEt3004()) {
+          mergeEt3004(other.getEt3004());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          
+          return false;
+        }
+        if (hasEt1001()) {
+          if (!getEt1001().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt1002()) {
+          if (!getEt1002().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt3001()) {
+          if (!getEt3001().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt3002()) {
+          if (!getEt3002().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt3003()) {
+          if (!getEt3003().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt3004()) {
+          if (!getEt3004().isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.EtMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.EtMessage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtMessageType type = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType type_ = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType.Tet1001;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtMessageType type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtMessageType type = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType getType() {
+        return type_;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtMessageType type = 1;</code>
+       */
+      public Builder setType(com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtMessageType type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageType.Tet1001;
+        onChanged();
+        return this;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et1001 et1001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1001.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1001, com.taoeaten.et.protobuf.CommandProtobuf.Et1001.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1001OrBuilder> et1001Builder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+       */
+      public boolean hasEt1001() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001 getEt1001() {
+        if (et1001Builder_ == null) {
+          return et1001_;
+        } else {
+          return et1001Builder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+       */
+      public Builder setEt1001(com.taoeaten.et.protobuf.CommandProtobuf.Et1001 value) {
+        if (et1001Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et1001_ = value;
+          onChanged();
+        } else {
+          et1001Builder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+       */
+      public Builder setEt1001(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1001.Builder builderForValue) {
+        if (et1001Builder_ == null) {
+          et1001_ = builderForValue.build();
+          onChanged();
+        } else {
+          et1001Builder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+       */
+      public Builder mergeEt1001(com.taoeaten.et.protobuf.CommandProtobuf.Et1001 value) {
+        if (et1001Builder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              et1001_ != com.taoeaten.et.protobuf.CommandProtobuf.Et1001.getDefaultInstance()) {
+            et1001_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1001.newBuilder(et1001_).mergeFrom(value).buildPartial();
+          } else {
+            et1001_ = value;
+          }
+          onChanged();
+        } else {
+          et1001Builder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+       */
+      public Builder clearEt1001() {
+        if (et1001Builder_ == null) {
+          et1001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1001.getDefaultInstance();
+          onChanged();
+        } else {
+          et1001Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001.Builder getEt1001Builder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getEt1001FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001OrBuilder getEt1001OrBuilder() {
+        if (et1001Builder_ != null) {
+          return et1001Builder_.getMessageOrBuilder();
+        } else {
+          return et1001_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001 et1001 = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1001, com.taoeaten.et.protobuf.CommandProtobuf.Et1001.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1001OrBuilder> 
+          getEt1001FieldBuilder() {
+        if (et1001Builder_ == null) {
+          et1001Builder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1001, com.taoeaten.et.protobuf.CommandProtobuf.Et1001.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1001OrBuilder>(
+                  et1001_,
+                  getParentForChildren(),
+                  isClean());
+          et1001_ = null;
+        }
+        return et1001Builder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et1002 et1002_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1002.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1002, com.taoeaten.et.protobuf.CommandProtobuf.Et1002.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1002OrBuilder> et1002Builder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+       */
+      public boolean hasEt1002() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002 getEt1002() {
+        if (et1002Builder_ == null) {
+          return et1002_;
+        } else {
+          return et1002Builder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+       */
+      public Builder setEt1002(com.taoeaten.et.protobuf.CommandProtobuf.Et1002 value) {
+        if (et1002Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et1002_ = value;
+          onChanged();
+        } else {
+          et1002Builder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+       */
+      public Builder setEt1002(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1002.Builder builderForValue) {
+        if (et1002Builder_ == null) {
+          et1002_ = builderForValue.build();
+          onChanged();
+        } else {
+          et1002Builder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+       */
+      public Builder mergeEt1002(com.taoeaten.et.protobuf.CommandProtobuf.Et1002 value) {
+        if (et1002Builder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              et1002_ != com.taoeaten.et.protobuf.CommandProtobuf.Et1002.getDefaultInstance()) {
+            et1002_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1002.newBuilder(et1002_).mergeFrom(value).buildPartial();
+          } else {
+            et1002_ = value;
+          }
+          onChanged();
+        } else {
+          et1002Builder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+       */
+      public Builder clearEt1002() {
+        if (et1002Builder_ == null) {
+          et1002_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1002.getDefaultInstance();
+          onChanged();
+        } else {
+          et1002Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002.Builder getEt1002Builder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getEt1002FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002OrBuilder getEt1002OrBuilder() {
+        if (et1002Builder_ != null) {
+          return et1002Builder_.getMessageOrBuilder();
+        } else {
+          return et1002_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002 et1002 = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1002, com.taoeaten.et.protobuf.CommandProtobuf.Et1002.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1002OrBuilder> 
+          getEt1002FieldBuilder() {
+        if (et1002Builder_ == null) {
+          et1002Builder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1002, com.taoeaten.et.protobuf.CommandProtobuf.Et1002.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1002OrBuilder>(
+                  et1002_,
+                  getParentForChildren(),
+                  isClean());
+          et1002_ = null;
+        }
+        return et1002Builder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et2001 et2001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et2001.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et2001, com.taoeaten.et.protobuf.CommandProtobuf.Et2001.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et2001OrBuilder> et2001Builder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+       */
+      public boolean hasEt2001() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001 getEt2001() {
+        if (et2001Builder_ == null) {
+          return et2001_;
+        } else {
+          return et2001Builder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+       */
+      public Builder setEt2001(com.taoeaten.et.protobuf.CommandProtobuf.Et2001 value) {
+        if (et2001Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et2001_ = value;
+          onChanged();
+        } else {
+          et2001Builder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+       */
+      public Builder setEt2001(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et2001.Builder builderForValue) {
+        if (et2001Builder_ == null) {
+          et2001_ = builderForValue.build();
+          onChanged();
+        } else {
+          et2001Builder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+       */
+      public Builder mergeEt2001(com.taoeaten.et.protobuf.CommandProtobuf.Et2001 value) {
+        if (et2001Builder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              et2001_ != com.taoeaten.et.protobuf.CommandProtobuf.Et2001.getDefaultInstance()) {
+            et2001_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et2001.newBuilder(et2001_).mergeFrom(value).buildPartial();
+          } else {
+            et2001_ = value;
+          }
+          onChanged();
+        } else {
+          et2001Builder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+       */
+      public Builder clearEt2001() {
+        if (et2001Builder_ == null) {
+          et2001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et2001.getDefaultInstance();
+          onChanged();
+        } else {
+          et2001Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001.Builder getEt2001Builder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getEt2001FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001OrBuilder getEt2001OrBuilder() {
+        if (et2001Builder_ != null) {
+          return et2001Builder_.getMessageOrBuilder();
+        } else {
+          return et2001_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001 et2001 = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et2001, com.taoeaten.et.protobuf.CommandProtobuf.Et2001.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et2001OrBuilder> 
+          getEt2001FieldBuilder() {
+        if (et2001Builder_ == null) {
+          et2001Builder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et2001, com.taoeaten.et.protobuf.CommandProtobuf.Et2001.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et2001OrBuilder>(
+                  et2001_,
+                  getParentForChildren(),
+                  isClean());
+          et2001_ = null;
+        }
+        return et2001Builder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et3001 et3001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3001.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3001, com.taoeaten.et.protobuf.CommandProtobuf.Et3001.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3001OrBuilder> et3001Builder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+       */
+      public boolean hasEt3001() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001 getEt3001() {
+        if (et3001Builder_ == null) {
+          return et3001_;
+        } else {
+          return et3001Builder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+       */
+      public Builder setEt3001(com.taoeaten.et.protobuf.CommandProtobuf.Et3001 value) {
+        if (et3001Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et3001_ = value;
+          onChanged();
+        } else {
+          et3001Builder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+       */
+      public Builder setEt3001(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3001.Builder builderForValue) {
+        if (et3001Builder_ == null) {
+          et3001_ = builderForValue.build();
+          onChanged();
+        } else {
+          et3001Builder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+       */
+      public Builder mergeEt3001(com.taoeaten.et.protobuf.CommandProtobuf.Et3001 value) {
+        if (et3001Builder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              et3001_ != com.taoeaten.et.protobuf.CommandProtobuf.Et3001.getDefaultInstance()) {
+            et3001_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3001.newBuilder(et3001_).mergeFrom(value).buildPartial();
+          } else {
+            et3001_ = value;
+          }
+          onChanged();
+        } else {
+          et3001Builder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+       */
+      public Builder clearEt3001() {
+        if (et3001Builder_ == null) {
+          et3001_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3001.getDefaultInstance();
+          onChanged();
+        } else {
+          et3001Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001.Builder getEt3001Builder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getEt3001FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001OrBuilder getEt3001OrBuilder() {
+        if (et3001Builder_ != null) {
+          return et3001Builder_.getMessageOrBuilder();
+        } else {
+          return et3001_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001 et3001 = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3001, com.taoeaten.et.protobuf.CommandProtobuf.Et3001.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3001OrBuilder> 
+          getEt3001FieldBuilder() {
+        if (et3001Builder_ == null) {
+          et3001Builder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3001, com.taoeaten.et.protobuf.CommandProtobuf.Et3001.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3001OrBuilder>(
+                  et3001_,
+                  getParentForChildren(),
+                  isClean());
+          et3001_ = null;
+        }
+        return et3001Builder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et3002 et3002_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3002.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3002, com.taoeaten.et.protobuf.CommandProtobuf.Et3002.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3002OrBuilder> et3002Builder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+       */
+      public boolean hasEt3002() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002 getEt3002() {
+        if (et3002Builder_ == null) {
+          return et3002_;
+        } else {
+          return et3002Builder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+       */
+      public Builder setEt3002(com.taoeaten.et.protobuf.CommandProtobuf.Et3002 value) {
+        if (et3002Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et3002_ = value;
+          onChanged();
+        } else {
+          et3002Builder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+       */
+      public Builder setEt3002(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3002.Builder builderForValue) {
+        if (et3002Builder_ == null) {
+          et3002_ = builderForValue.build();
+          onChanged();
+        } else {
+          et3002Builder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+       */
+      public Builder mergeEt3002(com.taoeaten.et.protobuf.CommandProtobuf.Et3002 value) {
+        if (et3002Builder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              et3002_ != com.taoeaten.et.protobuf.CommandProtobuf.Et3002.getDefaultInstance()) {
+            et3002_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3002.newBuilder(et3002_).mergeFrom(value).buildPartial();
+          } else {
+            et3002_ = value;
+          }
+          onChanged();
+        } else {
+          et3002Builder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+       */
+      public Builder clearEt3002() {
+        if (et3002Builder_ == null) {
+          et3002_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3002.getDefaultInstance();
+          onChanged();
+        } else {
+          et3002Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002.Builder getEt3002Builder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getEt3002FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002OrBuilder getEt3002OrBuilder() {
+        if (et3002Builder_ != null) {
+          return et3002Builder_.getMessageOrBuilder();
+        } else {
+          return et3002_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002 et3002 = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3002, com.taoeaten.et.protobuf.CommandProtobuf.Et3002.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3002OrBuilder> 
+          getEt3002FieldBuilder() {
+        if (et3002Builder_ == null) {
+          et3002Builder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3002, com.taoeaten.et.protobuf.CommandProtobuf.Et3002.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3002OrBuilder>(
+                  et3002_,
+                  getParentForChildren(),
+                  isClean());
+          et3002_ = null;
+        }
+        return et3002Builder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et3003 et3003_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3003.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3003, com.taoeaten.et.protobuf.CommandProtobuf.Et3003.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3003OrBuilder> et3003Builder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+       */
+      public boolean hasEt3003() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003 getEt3003() {
+        if (et3003Builder_ == null) {
+          return et3003_;
+        } else {
+          return et3003Builder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+       */
+      public Builder setEt3003(com.taoeaten.et.protobuf.CommandProtobuf.Et3003 value) {
+        if (et3003Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et3003_ = value;
+          onChanged();
+        } else {
+          et3003Builder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+       */
+      public Builder setEt3003(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3003.Builder builderForValue) {
+        if (et3003Builder_ == null) {
+          et3003_ = builderForValue.build();
+          onChanged();
+        } else {
+          et3003Builder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+       */
+      public Builder mergeEt3003(com.taoeaten.et.protobuf.CommandProtobuf.Et3003 value) {
+        if (et3003Builder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              et3003_ != com.taoeaten.et.protobuf.CommandProtobuf.Et3003.getDefaultInstance()) {
+            et3003_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3003.newBuilder(et3003_).mergeFrom(value).buildPartial();
+          } else {
+            et3003_ = value;
+          }
+          onChanged();
+        } else {
+          et3003Builder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+       */
+      public Builder clearEt3003() {
+        if (et3003Builder_ == null) {
+          et3003_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3003.getDefaultInstance();
+          onChanged();
+        } else {
+          et3003Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003.Builder getEt3003Builder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getEt3003FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003OrBuilder getEt3003OrBuilder() {
+        if (et3003Builder_ != null) {
+          return et3003Builder_.getMessageOrBuilder();
+        } else {
+          return et3003_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003 et3003 = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3003, com.taoeaten.et.protobuf.CommandProtobuf.Et3003.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3003OrBuilder> 
+          getEt3003FieldBuilder() {
+        if (et3003Builder_ == null) {
+          et3003Builder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3003, com.taoeaten.et.protobuf.CommandProtobuf.Et3003.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3003OrBuilder>(
+                  et3003_,
+                  getParentForChildren(),
+                  isClean());
+          et3003_ = null;
+        }
+        return et3003Builder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et3004 et3004_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3004.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3004, com.taoeaten.et.protobuf.CommandProtobuf.Et3004.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3004OrBuilder> et3004Builder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+       */
+      public boolean hasEt3004() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004 getEt3004() {
+        if (et3004Builder_ == null) {
+          return et3004_;
+        } else {
+          return et3004Builder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+       */
+      public Builder setEt3004(com.taoeaten.et.protobuf.CommandProtobuf.Et3004 value) {
+        if (et3004Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et3004_ = value;
+          onChanged();
+        } else {
+          et3004Builder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+       */
+      public Builder setEt3004(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3004.Builder builderForValue) {
+        if (et3004Builder_ == null) {
+          et3004_ = builderForValue.build();
+          onChanged();
+        } else {
+          et3004Builder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+       */
+      public Builder mergeEt3004(com.taoeaten.et.protobuf.CommandProtobuf.Et3004 value) {
+        if (et3004Builder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              et3004_ != com.taoeaten.et.protobuf.CommandProtobuf.Et3004.getDefaultInstance()) {
+            et3004_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3004.newBuilder(et3004_).mergeFrom(value).buildPartial();
+          } else {
+            et3004_ = value;
+          }
+          onChanged();
+        } else {
+          et3004Builder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+       */
+      public Builder clearEt3004() {
+        if (et3004Builder_ == null) {
+          et3004_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3004.getDefaultInstance();
+          onChanged();
+        } else {
+          et3004Builder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004.Builder getEt3004Builder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getEt3004FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004OrBuilder getEt3004OrBuilder() {
+        if (et3004Builder_ != null) {
+          return et3004Builder_.getMessageOrBuilder();
+        } else {
+          return et3004_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004 et3004 = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3004, com.taoeaten.et.protobuf.CommandProtobuf.Et3004.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3004OrBuilder> 
+          getEt3004FieldBuilder() {
+        if (et3004Builder_ == null) {
+          et3004Builder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3004, com.taoeaten.et.protobuf.CommandProtobuf.Et3004.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3004OrBuilder>(
+                  et3004_,
+                  getParentForChildren(),
+                  isClean());
+          et3004_ = null;
+        }
+        return et3004Builder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.EtMessage)
+    }
+
+    static {
+      defaultInstance = new EtMessage(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.EtMessage)
+  }
+
+  public interface EtMessageROrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .com.taoeaten.et.protobuf.EtMessageRType type = 1;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtMessageRType type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtMessageRType type = 1;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType getType();
+
+    // optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+     */
+    boolean hasEt1001R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et1001R getEt1001R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et1001ROrBuilder getEt1001ROrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+     */
+    boolean hasEt1002R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et1002R getEt1002R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et1002ROrBuilder getEt1002ROrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+     */
+    boolean hasEt2001R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et2001R getEt2001R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et2001ROrBuilder getEt2001ROrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+     */
+    boolean hasEt3001R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3001R getEt3001R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3001ROrBuilder getEt3001ROrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+     */
+    boolean hasEt3002R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3002R getEt3002R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3002ROrBuilder getEt3002ROrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+     */
+    boolean hasEt3003R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3003R getEt3003R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3003ROrBuilder getEt3003ROrBuilder();
+
+    // optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+     */
+    boolean hasEt3004R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3004R getEt3004R();
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+     */
+    com.taoeaten.et.protobuf.CommandProtobuf.Et3004ROrBuilder getEt3004ROrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.taoeaten.et.protobuf.EtMessageR}
+   */
+  public static final class EtMessageR extends
+      com.google.protobuf.GeneratedMessage
+      implements EtMessageROrBuilder {
+    // Use EtMessageR.newBuilder() to construct.
+    private EtMessageR(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private EtMessageR(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final EtMessageR defaultInstance;
+    public static EtMessageR getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public EtMessageR getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EtMessageR(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType value = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                type_ = value;
+              }
+              break;
+            }
+            case 18: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = et1001R_.toBuilder();
+              }
+              et1001R_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et1001R_);
+                et1001R_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = et1002R_.toBuilder();
+              }
+              et1002R_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et1002R_);
+                et1002R_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = et2001R_.toBuilder();
+              }
+              et2001R_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et2001R_);
+                et2001R_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = et3001R_.toBuilder();
+              }
+              et3001R_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et3001R_);
+                et3001R_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            case 50: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = et3002R_.toBuilder();
+              }
+              et3002R_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et3002R_);
+                et3002R_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 58: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = et3003R_.toBuilder();
+              }
+              et3003R_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et3003R_);
+                et3003R_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+            case 66: {
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = et3004R_.toBuilder();
+              }
+              et3004R_ = input.readMessage(com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(et3004R_);
+                et3004R_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessageR_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessageR_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR.class, com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<EtMessageR> PARSER =
+        new com.google.protobuf.AbstractParser<EtMessageR>() {
+      public EtMessageR parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EtMessageR(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EtMessageR> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .com.taoeaten.et.protobuf.EtMessageRType type = 1;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType type_;
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtMessageRType type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.taoeaten.et.protobuf.EtMessageRType type = 1;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType getType() {
+      return type_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;
+    public static final int ET1001R_FIELD_NUMBER = 2;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et1001R et1001R_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+     */
+    public boolean hasEt1001R() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et1001R getEt1001R() {
+      return et1001R_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et1001ROrBuilder getEt1001ROrBuilder() {
+      return et1001R_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;
+    public static final int ET1002R_FIELD_NUMBER = 3;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et1002R et1002R_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+     */
+    public boolean hasEt1002R() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et1002R getEt1002R() {
+      return et1002R_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et1002ROrBuilder getEt1002ROrBuilder() {
+      return et1002R_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;
+    public static final int ET2001R_FIELD_NUMBER = 4;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et2001R et2001R_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+     */
+    public boolean hasEt2001R() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et2001R getEt2001R() {
+      return et2001R_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et2001ROrBuilder getEt2001ROrBuilder() {
+      return et2001R_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;
+    public static final int ET3001R_FIELD_NUMBER = 5;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et3001R et3001R_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+     */
+    public boolean hasEt3001R() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3001R getEt3001R() {
+      return et3001R_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3001ROrBuilder getEt3001ROrBuilder() {
+      return et3001R_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;
+    public static final int ET3002R_FIELD_NUMBER = 6;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et3002R et3002R_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+     */
+    public boolean hasEt3002R() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3002R getEt3002R() {
+      return et3002R_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3002ROrBuilder getEt3002ROrBuilder() {
+      return et3002R_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;
+    public static final int ET3003R_FIELD_NUMBER = 7;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et3003R et3003R_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+     */
+    public boolean hasEt3003R() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3003R getEt3003R() {
+      return et3003R_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3003ROrBuilder getEt3003ROrBuilder() {
+      return et3003R_;
+    }
+
+    // optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;
+    public static final int ET3004R_FIELD_NUMBER = 8;
+    private com.taoeaten.et.protobuf.CommandProtobuf.Et3004R et3004R_;
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+     */
+    public boolean hasEt3004R() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3004R getEt3004R() {
+      return et3004R_;
+    }
+    /**
+     * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+     */
+    public com.taoeaten.et.protobuf.CommandProtobuf.Et3004ROrBuilder getEt3004ROrBuilder() {
+      return et3004R_;
+    }
+
+    private void initFields() {
+      type_ = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType.Tet1001R;
+      et1001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.getDefaultInstance();
+      et1002R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.getDefaultInstance();
+      et2001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.getDefaultInstance();
+      et3001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.getDefaultInstance();
+      et3002R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.getDefaultInstance();
+      et3003R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.getDefaultInstance();
+      et3004R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasEt1001R()) {
+        if (!getEt1001R().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt1002R()) {
+        if (!getEt1002R().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt2001R()) {
+        if (!getEt2001R().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt3001R()) {
+        if (!getEt3001R().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt3002R()) {
+        if (!getEt3002R().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt3003R()) {
+        if (!getEt3003R().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasEt3004R()) {
+        if (!getEt3004R().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, et1001R_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, et1002R_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, et2001R_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, et3001R_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(6, et3002R_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(7, et3003R_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(8, et3004R_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, et1001R_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, et1002R_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, et2001R_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, et3001R_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, et3002R_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, et3003R_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, et3004R_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.taoeaten.et.protobuf.EtMessageR}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.taoeaten.et.protobuf.CommandProtobuf.EtMessageROrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessageR_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessageR_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR.class, com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR.Builder.class);
+      }
+
+      // Construct using com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getEt1001RFieldBuilder();
+          getEt1002RFieldBuilder();
+          getEt2001RFieldBuilder();
+          getEt3001RFieldBuilder();
+          getEt3002RFieldBuilder();
+          getEt3003RFieldBuilder();
+          getEt3004RFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        type_ = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType.Tet1001R;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (et1001RBuilder_ == null) {
+          et1001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.getDefaultInstance();
+        } else {
+          et1001RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (et1002RBuilder_ == null) {
+          et1002R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.getDefaultInstance();
+        } else {
+          et1002RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (et2001RBuilder_ == null) {
+          et2001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.getDefaultInstance();
+        } else {
+          et2001RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (et3001RBuilder_ == null) {
+          et3001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.getDefaultInstance();
+        } else {
+          et3001RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (et3002RBuilder_ == null) {
+          et3002R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.getDefaultInstance();
+        } else {
+          et3002RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (et3003RBuilder_ == null) {
+          et3003R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.getDefaultInstance();
+        } else {
+          et3003RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (et3004RBuilder_ == null) {
+          et3004R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.getDefaultInstance();
+        } else {
+          et3004RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.internal_static_com_taoeaten_et_protobuf_EtMessageR_descriptor;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR getDefaultInstanceForType() {
+        return com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR.getDefaultInstance();
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR build() {
+        com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR buildPartial() {
+        com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR result = new com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (et1001RBuilder_ == null) {
+          result.et1001R_ = et1001R_;
+        } else {
+          result.et1001R_ = et1001RBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (et1002RBuilder_ == null) {
+          result.et1002R_ = et1002R_;
+        } else {
+          result.et1002R_ = et1002RBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (et2001RBuilder_ == null) {
+          result.et2001R_ = et2001R_;
+        } else {
+          result.et2001R_ = et2001RBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (et3001RBuilder_ == null) {
+          result.et3001R_ = et3001R_;
+        } else {
+          result.et3001R_ = et3001RBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (et3002RBuilder_ == null) {
+          result.et3002R_ = et3002R_;
+        } else {
+          result.et3002R_ = et3002RBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        if (et3003RBuilder_ == null) {
+          result.et3003R_ = et3003R_;
+        } else {
+          result.et3003R_ = et3003RBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        if (et3004RBuilder_ == null) {
+          result.et3004R_ = et3004R_;
+        } else {
+          result.et3004R_ = et3004RBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR) {
+          return mergeFrom((com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR other) {
+        if (other == com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasEt1001R()) {
+          mergeEt1001R(other.getEt1001R());
+        }
+        if (other.hasEt1002R()) {
+          mergeEt1002R(other.getEt1002R());
+        }
+        if (other.hasEt2001R()) {
+          mergeEt2001R(other.getEt2001R());
+        }
+        if (other.hasEt3001R()) {
+          mergeEt3001R(other.getEt3001R());
+        }
+        if (other.hasEt3002R()) {
+          mergeEt3002R(other.getEt3002R());
+        }
+        if (other.hasEt3003R()) {
+          mergeEt3003R(other.getEt3003R());
+        }
+        if (other.hasEt3004R()) {
+          mergeEt3004R(other.getEt3004R());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          
+          return false;
+        }
+        if (hasEt1001R()) {
+          if (!getEt1001R().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt1002R()) {
+          if (!getEt1002R().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt2001R()) {
+          if (!getEt2001R().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt3001R()) {
+          if (!getEt3001R().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt3002R()) {
+          if (!getEt3002R().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt3003R()) {
+          if (!getEt3003R().isInitialized()) {
+            
+            return false;
+          }
+        }
+        if (hasEt3004R()) {
+          if (!getEt3004R().isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.taoeaten.et.protobuf.CommandProtobuf.EtMessageR) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .com.taoeaten.et.protobuf.EtMessageRType type = 1;
+      private com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType type_ = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType.Tet1001R;
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtMessageRType type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtMessageRType type = 1;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType getType() {
+        return type_;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtMessageRType type = 1;</code>
+       */
+      public Builder setType(com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .com.taoeaten.et.protobuf.EtMessageRType type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = com.taoeaten.et.protobuf.CommandProtobuf.EtMessageRType.Tet1001R;
+        onChanged();
+        return this;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et1001R et1001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1001R, com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1001ROrBuilder> et1001RBuilder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+       */
+      public boolean hasEt1001R() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001R getEt1001R() {
+        if (et1001RBuilder_ == null) {
+          return et1001R_;
+        } else {
+          return et1001RBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+       */
+      public Builder setEt1001R(com.taoeaten.et.protobuf.CommandProtobuf.Et1001R value) {
+        if (et1001RBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et1001R_ = value;
+          onChanged();
+        } else {
+          et1001RBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+       */
+      public Builder setEt1001R(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.Builder builderForValue) {
+        if (et1001RBuilder_ == null) {
+          et1001R_ = builderForValue.build();
+          onChanged();
+        } else {
+          et1001RBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+       */
+      public Builder mergeEt1001R(com.taoeaten.et.protobuf.CommandProtobuf.Et1001R value) {
+        if (et1001RBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              et1001R_ != com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.getDefaultInstance()) {
+            et1001R_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.newBuilder(et1001R_).mergeFrom(value).buildPartial();
+          } else {
+            et1001R_ = value;
+          }
+          onChanged();
+        } else {
+          et1001RBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+       */
+      public Builder clearEt1001R() {
+        if (et1001RBuilder_ == null) {
+          et1001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.getDefaultInstance();
+          onChanged();
+        } else {
+          et1001RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.Builder getEt1001RBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getEt1001RFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1001ROrBuilder getEt1001ROrBuilder() {
+        if (et1001RBuilder_ != null) {
+          return et1001RBuilder_.getMessageOrBuilder();
+        } else {
+          return et1001R_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1001R et1001R = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1001R, com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1001ROrBuilder> 
+          getEt1001RFieldBuilder() {
+        if (et1001RBuilder_ == null) {
+          et1001RBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1001R, com.taoeaten.et.protobuf.CommandProtobuf.Et1001R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1001ROrBuilder>(
+                  et1001R_,
+                  getParentForChildren(),
+                  isClean());
+          et1001R_ = null;
+        }
+        return et1001RBuilder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et1002R et1002R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1002R, com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1002ROrBuilder> et1002RBuilder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+       */
+      public boolean hasEt1002R() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002R getEt1002R() {
+        if (et1002RBuilder_ == null) {
+          return et1002R_;
+        } else {
+          return et1002RBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+       */
+      public Builder setEt1002R(com.taoeaten.et.protobuf.CommandProtobuf.Et1002R value) {
+        if (et1002RBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et1002R_ = value;
+          onChanged();
+        } else {
+          et1002RBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+       */
+      public Builder setEt1002R(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.Builder builderForValue) {
+        if (et1002RBuilder_ == null) {
+          et1002R_ = builderForValue.build();
+          onChanged();
+        } else {
+          et1002RBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+       */
+      public Builder mergeEt1002R(com.taoeaten.et.protobuf.CommandProtobuf.Et1002R value) {
+        if (et1002RBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              et1002R_ != com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.getDefaultInstance()) {
+            et1002R_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.newBuilder(et1002R_).mergeFrom(value).buildPartial();
+          } else {
+            et1002R_ = value;
+          }
+          onChanged();
+        } else {
+          et1002RBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+       */
+      public Builder clearEt1002R() {
+        if (et1002RBuilder_ == null) {
+          et1002R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.getDefaultInstance();
+          onChanged();
+        } else {
+          et1002RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.Builder getEt1002RBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getEt1002RFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et1002ROrBuilder getEt1002ROrBuilder() {
+        if (et1002RBuilder_ != null) {
+          return et1002RBuilder_.getMessageOrBuilder();
+        } else {
+          return et1002R_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et1002R et1002R = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et1002R, com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1002ROrBuilder> 
+          getEt1002RFieldBuilder() {
+        if (et1002RBuilder_ == null) {
+          et1002RBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et1002R, com.taoeaten.et.protobuf.CommandProtobuf.Et1002R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et1002ROrBuilder>(
+                  et1002R_,
+                  getParentForChildren(),
+                  isClean());
+          et1002R_ = null;
+        }
+        return et1002RBuilder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et2001R et2001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et2001R, com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et2001ROrBuilder> et2001RBuilder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+       */
+      public boolean hasEt2001R() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001R getEt2001R() {
+        if (et2001RBuilder_ == null) {
+          return et2001R_;
+        } else {
+          return et2001RBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+       */
+      public Builder setEt2001R(com.taoeaten.et.protobuf.CommandProtobuf.Et2001R value) {
+        if (et2001RBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et2001R_ = value;
+          onChanged();
+        } else {
+          et2001RBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+       */
+      public Builder setEt2001R(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.Builder builderForValue) {
+        if (et2001RBuilder_ == null) {
+          et2001R_ = builderForValue.build();
+          onChanged();
+        } else {
+          et2001RBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+       */
+      public Builder mergeEt2001R(com.taoeaten.et.protobuf.CommandProtobuf.Et2001R value) {
+        if (et2001RBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              et2001R_ != com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.getDefaultInstance()) {
+            et2001R_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.newBuilder(et2001R_).mergeFrom(value).buildPartial();
+          } else {
+            et2001R_ = value;
+          }
+          onChanged();
+        } else {
+          et2001RBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+       */
+      public Builder clearEt2001R() {
+        if (et2001RBuilder_ == null) {
+          et2001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.getDefaultInstance();
+          onChanged();
+        } else {
+          et2001RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.Builder getEt2001RBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getEt2001RFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et2001ROrBuilder getEt2001ROrBuilder() {
+        if (et2001RBuilder_ != null) {
+          return et2001RBuilder_.getMessageOrBuilder();
+        } else {
+          return et2001R_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et2001R et2001R = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et2001R, com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et2001ROrBuilder> 
+          getEt2001RFieldBuilder() {
+        if (et2001RBuilder_ == null) {
+          et2001RBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et2001R, com.taoeaten.et.protobuf.CommandProtobuf.Et2001R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et2001ROrBuilder>(
+                  et2001R_,
+                  getParentForChildren(),
+                  isClean());
+          et2001R_ = null;
+        }
+        return et2001RBuilder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et3001R et3001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3001R, com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3001ROrBuilder> et3001RBuilder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+       */
+      public boolean hasEt3001R() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001R getEt3001R() {
+        if (et3001RBuilder_ == null) {
+          return et3001R_;
+        } else {
+          return et3001RBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+       */
+      public Builder setEt3001R(com.taoeaten.et.protobuf.CommandProtobuf.Et3001R value) {
+        if (et3001RBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et3001R_ = value;
+          onChanged();
+        } else {
+          et3001RBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+       */
+      public Builder setEt3001R(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.Builder builderForValue) {
+        if (et3001RBuilder_ == null) {
+          et3001R_ = builderForValue.build();
+          onChanged();
+        } else {
+          et3001RBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+       */
+      public Builder mergeEt3001R(com.taoeaten.et.protobuf.CommandProtobuf.Et3001R value) {
+        if (et3001RBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              et3001R_ != com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.getDefaultInstance()) {
+            et3001R_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.newBuilder(et3001R_).mergeFrom(value).buildPartial();
+          } else {
+            et3001R_ = value;
+          }
+          onChanged();
+        } else {
+          et3001RBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+       */
+      public Builder clearEt3001R() {
+        if (et3001RBuilder_ == null) {
+          et3001R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.getDefaultInstance();
+          onChanged();
+        } else {
+          et3001RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.Builder getEt3001RBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getEt3001RFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3001ROrBuilder getEt3001ROrBuilder() {
+        if (et3001RBuilder_ != null) {
+          return et3001RBuilder_.getMessageOrBuilder();
+        } else {
+          return et3001R_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3001R et3001R = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3001R, com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3001ROrBuilder> 
+          getEt3001RFieldBuilder() {
+        if (et3001RBuilder_ == null) {
+          et3001RBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3001R, com.taoeaten.et.protobuf.CommandProtobuf.Et3001R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3001ROrBuilder>(
+                  et3001R_,
+                  getParentForChildren(),
+                  isClean());
+          et3001R_ = null;
+        }
+        return et3001RBuilder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et3002R et3002R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3002R, com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3002ROrBuilder> et3002RBuilder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+       */
+      public boolean hasEt3002R() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002R getEt3002R() {
+        if (et3002RBuilder_ == null) {
+          return et3002R_;
+        } else {
+          return et3002RBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+       */
+      public Builder setEt3002R(com.taoeaten.et.protobuf.CommandProtobuf.Et3002R value) {
+        if (et3002RBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et3002R_ = value;
+          onChanged();
+        } else {
+          et3002RBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+       */
+      public Builder setEt3002R(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.Builder builderForValue) {
+        if (et3002RBuilder_ == null) {
+          et3002R_ = builderForValue.build();
+          onChanged();
+        } else {
+          et3002RBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+       */
+      public Builder mergeEt3002R(com.taoeaten.et.protobuf.CommandProtobuf.Et3002R value) {
+        if (et3002RBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              et3002R_ != com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.getDefaultInstance()) {
+            et3002R_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.newBuilder(et3002R_).mergeFrom(value).buildPartial();
+          } else {
+            et3002R_ = value;
+          }
+          onChanged();
+        } else {
+          et3002RBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+       */
+      public Builder clearEt3002R() {
+        if (et3002RBuilder_ == null) {
+          et3002R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.getDefaultInstance();
+          onChanged();
+        } else {
+          et3002RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.Builder getEt3002RBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getEt3002RFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3002ROrBuilder getEt3002ROrBuilder() {
+        if (et3002RBuilder_ != null) {
+          return et3002RBuilder_.getMessageOrBuilder();
+        } else {
+          return et3002R_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3002R et3002R = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3002R, com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3002ROrBuilder> 
+          getEt3002RFieldBuilder() {
+        if (et3002RBuilder_ == null) {
+          et3002RBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3002R, com.taoeaten.et.protobuf.CommandProtobuf.Et3002R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3002ROrBuilder>(
+                  et3002R_,
+                  getParentForChildren(),
+                  isClean());
+          et3002R_ = null;
+        }
+        return et3002RBuilder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et3003R et3003R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3003R, com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3003ROrBuilder> et3003RBuilder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+       */
+      public boolean hasEt3003R() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003R getEt3003R() {
+        if (et3003RBuilder_ == null) {
+          return et3003R_;
+        } else {
+          return et3003RBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+       */
+      public Builder setEt3003R(com.taoeaten.et.protobuf.CommandProtobuf.Et3003R value) {
+        if (et3003RBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et3003R_ = value;
+          onChanged();
+        } else {
+          et3003RBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+       */
+      public Builder setEt3003R(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.Builder builderForValue) {
+        if (et3003RBuilder_ == null) {
+          et3003R_ = builderForValue.build();
+          onChanged();
+        } else {
+          et3003RBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+       */
+      public Builder mergeEt3003R(com.taoeaten.et.protobuf.CommandProtobuf.Et3003R value) {
+        if (et3003RBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              et3003R_ != com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.getDefaultInstance()) {
+            et3003R_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.newBuilder(et3003R_).mergeFrom(value).buildPartial();
+          } else {
+            et3003R_ = value;
+          }
+          onChanged();
+        } else {
+          et3003RBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+       */
+      public Builder clearEt3003R() {
+        if (et3003RBuilder_ == null) {
+          et3003R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.getDefaultInstance();
+          onChanged();
+        } else {
+          et3003RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.Builder getEt3003RBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getEt3003RFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3003ROrBuilder getEt3003ROrBuilder() {
+        if (et3003RBuilder_ != null) {
+          return et3003RBuilder_.getMessageOrBuilder();
+        } else {
+          return et3003R_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3003R et3003R = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3003R, com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3003ROrBuilder> 
+          getEt3003RFieldBuilder() {
+        if (et3003RBuilder_ == null) {
+          et3003RBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3003R, com.taoeaten.et.protobuf.CommandProtobuf.Et3003R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3003ROrBuilder>(
+                  et3003R_,
+                  getParentForChildren(),
+                  isClean());
+          et3003R_ = null;
+        }
+        return et3003RBuilder_;
+      }
+
+      // optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;
+      private com.taoeaten.et.protobuf.CommandProtobuf.Et3004R et3004R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3004R, com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3004ROrBuilder> et3004RBuilder_;
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+       */
+      public boolean hasEt3004R() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004R getEt3004R() {
+        if (et3004RBuilder_ == null) {
+          return et3004R_;
+        } else {
+          return et3004RBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+       */
+      public Builder setEt3004R(com.taoeaten.et.protobuf.CommandProtobuf.Et3004R value) {
+        if (et3004RBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          et3004R_ = value;
+          onChanged();
+        } else {
+          et3004RBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+       */
+      public Builder setEt3004R(
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.Builder builderForValue) {
+        if (et3004RBuilder_ == null) {
+          et3004R_ = builderForValue.build();
+          onChanged();
+        } else {
+          et3004RBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+       */
+      public Builder mergeEt3004R(com.taoeaten.et.protobuf.CommandProtobuf.Et3004R value) {
+        if (et3004RBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              et3004R_ != com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.getDefaultInstance()) {
+            et3004R_ =
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.newBuilder(et3004R_).mergeFrom(value).buildPartial();
+          } else {
+            et3004R_ = value;
+          }
+          onChanged();
+        } else {
+          et3004RBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+       */
+      public Builder clearEt3004R() {
+        if (et3004RBuilder_ == null) {
+          et3004R_ = com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.getDefaultInstance();
+          onChanged();
+        } else {
+          et3004RBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.Builder getEt3004RBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getEt3004RFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+       */
+      public com.taoeaten.et.protobuf.CommandProtobuf.Et3004ROrBuilder getEt3004ROrBuilder() {
+        if (et3004RBuilder_ != null) {
+          return et3004RBuilder_.getMessageOrBuilder();
+        } else {
+          return et3004R_;
+        }
+      }
+      /**
+       * <code>optional .com.taoeaten.et.protobuf.Et3004R et3004R = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.taoeaten.et.protobuf.CommandProtobuf.Et3004R, com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3004ROrBuilder> 
+          getEt3004RFieldBuilder() {
+        if (et3004RBuilder_ == null) {
+          et3004RBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.taoeaten.et.protobuf.CommandProtobuf.Et3004R, com.taoeaten.et.protobuf.CommandProtobuf.Et3004R.Builder, com.taoeaten.et.protobuf.CommandProtobuf.Et3004ROrBuilder>(
+                  et3004R_,
+                  getParentForChildren(),
+                  isClean());
+          et3004R_ = null;
+        }
+        return et3004RBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.taoeaten.et.protobuf.EtMessageR)
+    }
+
+    static {
+      defaultInstance = new EtMessageR(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.taoeaten.et.protobuf.EtMessageR)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_taoeaten_et_protobuf_Command_descriptor;
+    internal_static_com_taoeaten_et_protobuf_Player_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_taoeaten_et_protobuf_Command_fieldAccessorTable;
+      internal_static_com_taoeaten_et_protobuf_Player_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_taoeaten_et_protobuf_Room_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_taoeaten_et_protobuf_Room_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_EtResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_EtResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et1001_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et1001_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et1001R_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et1001R_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et1002_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et1002_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et1002R_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et1002R_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et2001_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et2001_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et2001R_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et2001R_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et3001_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et3001_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et3001R_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et3001R_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et3002_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et3002_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et3002R_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et3002R_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et3003_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et3003_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et3003R_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et3003R_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et3004_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et3004_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_Et3004R_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_Et3004R_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_EtMessage_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_EtMessage_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_taoeaten_et_protobuf_EtMessageR_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_taoeaten_et_protobuf_EtMessageR_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1536,10 +14184,65 @@ public final class CommandProtobuf {
   static {
     java.lang.String[] descriptorData = {
       "\n\rCommand.proto\022\030com.taoeaten.et.protobu" +
-      "f\"|\n\007Command\022\r\n\005cmdNo\030\001 \002(\005\022\020\n\010userName\030" +
-      "\002 \002(\t\022\016\n\006roomNo\030\003 \001(\005\022\021\n\tuserReady\030\004 \001(\005" +
-      "\022-\n\005rooms\030\005 \003(\0132\036.com.taoeaten.et.protob" +
-      "uf.Room\"\026\n\004Room\022\016\n\006roomId\030\001 \002(\005B+\n\030com.t" +
+      "f\"l\n\006Player\022\n\n\002id\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\022\020\n" +
+      "\010password\030\003 \001(\t\0226\n\006status\030\004 \001(\0162&.com.ta" +
+      "oeaten.et.protobuf.PlayerStatus\"\211\001\n\004Room" +
+      "\022\n\n\002id\030\001 \002(\005\022\014\n\004name\030\002 \002(\t\0224\n\006status\030\003 \002" +
+      "(\0162$.com.taoeaten.et.protobuf.RoomStatus" +
+      "\0221\n\007players\030\004 \003(\0132 .com.taoeaten.et.prot" +
+      "obuf.Player\"V\n\nEtResponse\022:\n\006status\030\001 \002(" +
+      "\0162*.com.taoeaten.et.protobuf.EtResponseS" +
+      "tatus\022\014\n\004hint\030\002 \001(\t\",\n\006Et1001\022\020\n\010usernam",
+      "e\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\"A\n\007Et1001R\0226\n\010" +
+      "response\030\001 \002(\0132$.com.taoeaten.et.protobu" +
+      "f.EtResponse\"\030\n\006Et1002\022\016\n\006userId\030\001 \002(\005\"A" +
+      "\n\007Et1002R\0226\n\010response\030\001 \002(\0132$.com.taoeat" +
+      "en.et.protobuf.EtResponse\"\010\n\006Et2001\"p\n\007E" +
+      "t2001R\0226\n\010response\030\001 \002(\0132$.com.taoeaten." +
+      "et.protobuf.EtResponse\022-\n\005rooms\030\002 \003(\0132\036." +
+      "com.taoeaten.et.protobuf.Room\"(\n\006Et3001\022" +
+      "\016\n\006userId\030\001 \002(\005\022\016\n\006roomId\030\002 \002(\005\"A\n\007Et300" +
+      "1R\0226\n\010response\030\001 \002(\0132$.com.taoeaten.et.p",
+      "rotobuf.EtResponse\"(\n\006Et3002\022\016\n\006userId\030\001" +
+      " \002(\005\022\016\n\006roomId\030\002 \002(\005\"A\n\007Et3002R\0226\n\010respo" +
+      "nse\030\001 \002(\0132$.com.taoeaten.et.protobuf.EtR" +
+      "esponse\"(\n\006Et3003\022\016\n\006userId\030\001 \002(\005\022\016\n\006roo" +
+      "mId\030\002 \002(\005\"A\n\007Et3003R\0226\n\010response\030\001 \002(\0132$" +
+      ".com.taoeaten.et.protobuf.EtResponse\"(\n\006" +
+      "Et3004\022\016\n\006userId\030\001 \002(\005\022\016\n\006roomId\030\002 \002(\005\"A" +
+      "\n\007Et3004R\0226\n\010response\030\001 \002(\0132$.com.taoeat" +
+      "en.et.protobuf.EtResponse\"\240\003\n\tEtMessage\022" +
+      "5\n\004type\030\001 \002(\0162\'.com.taoeaten.et.protobuf",
+      ".EtMessageType\0220\n\006et1001\030\002 \001(\0132 .com.tao" +
+      "eaten.et.protobuf.Et1001\0220\n\006et1002\030\003 \001(\013" +
+      "2 .com.taoeaten.et.protobuf.Et1002\0220\n\006et" +
+      "2001\030\004 \001(\0132 .com.taoeaten.et.protobuf.Et" +
+      "2001\0220\n\006et3001\030\005 \001(\0132 .com.taoeaten.et.p" +
+      "rotobuf.Et3001\0220\n\006et3002\030\006 \001(\0132 .com.tao" +
+      "eaten.et.protobuf.Et3002\0220\n\006et3003\030\007 \001(\013" +
+      "2 .com.taoeaten.et.protobuf.Et3003\0220\n\006et" +
+      "3004\030\010 \001(\0132 .com.taoeaten.et.protobuf.Et" +
+      "3004\"\260\003\n\nEtMessageR\0226\n\004type\030\001 \002(\0162(.com.",
+      "taoeaten.et.protobuf.EtMessageRType\0222\n\007e" +
+      "t1001R\030\002 \001(\0132!.com.taoeaten.et.protobuf." +
+      "Et1001R\0222\n\007et1002R\030\003 \001(\0132!.com.taoeaten." +
+      "et.protobuf.Et1002R\0222\n\007et2001R\030\004 \001(\0132!.c" +
+      "om.taoeaten.et.protobuf.Et2001R\0222\n\007et300" +
+      "1R\030\005 \001(\0132!.com.taoeaten.et.protobuf.Et30" +
+      "01R\0222\n\007et3002R\030\006 \001(\0132!.com.taoeaten.et.p" +
+      "rotobuf.Et3002R\0222\n\007et3003R\030\007 \001(\0132!.com.t" +
+      "aoeaten.et.protobuf.Et3003R\0222\n\007et3004R\030\010" +
+      " \001(\0132!.com.taoeaten.et.protobuf.Et3004R*",
+      "@\n\014PlayerStatus\022\013\n\007OFFLINE\020\001\022\n\n\006ONLINE\020\002" +
+      "\022\n\n\006INROOM\020\003\022\013\n\007PLAYING\020\004*7\n\nRoomStatus\022" +
+      "\010\n\004WAIT\020\001\022\010\n\004FULL\020\002\022\t\n\005READY\020\003\022\n\n\006GAMING" +
+      "\020\004*j\n\rEtMessageType\022\013\n\007Tet1001\020\001\022\013\n\007Tet1" +
+      "002\020\002\022\013\n\007Tet2001\020\003\022\013\n\007Tet3001\020\004\022\013\n\007Tet30" +
+      "02\020\005\022\013\n\007Tet3003\020\006\022\013\n\007Tet3004\020\007*r\n\016EtMess" +
+      "ageRType\022\014\n\010Tet1001R\020\001\022\014\n\010Tet1002R\020\002\022\014\n\010" +
+      "Tet2001R\020\003\022\014\n\010Tet3001R\020\004\022\014\n\010Tet3002R\020\005\022\014" +
+      "\n\010Tet3003R\020\006\022\014\n\010Tet3004R\020\007*+\n\020EtResponse" +
+      "Status\022\013\n\007SUCCESS\020\001\022\n\n\006FAILED\020\002B+\n\030com.t",
       "aoeaten.et.protobufB\017CommandProtobuf"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
@@ -1547,18 +14250,120 @@ public final class CommandProtobuf {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_com_taoeaten_et_protobuf_Command_descriptor =
+          internal_static_com_taoeaten_et_protobuf_Player_descriptor =
             getDescriptor().getMessageTypes().get(0);
-          internal_static_com_taoeaten_et_protobuf_Command_fieldAccessorTable = new
+          internal_static_com_taoeaten_et_protobuf_Player_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_com_taoeaten_et_protobuf_Command_descriptor,
-              new java.lang.String[] { "CmdNo", "UserName", "RoomNo", "UserReady", "Rooms", });
+              internal_static_com_taoeaten_et_protobuf_Player_descriptor,
+              new java.lang.String[] { "Id", "Name", "Password", "Status", });
           internal_static_com_taoeaten_et_protobuf_Room_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_com_taoeaten_et_protobuf_Room_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_taoeaten_et_protobuf_Room_descriptor,
-              new java.lang.String[] { "RoomId", });
+              new java.lang.String[] { "Id", "Name", "Status", "Players", });
+          internal_static_com_taoeaten_et_protobuf_EtResponse_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+          internal_static_com_taoeaten_et_protobuf_EtResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_EtResponse_descriptor,
+              new java.lang.String[] { "Status", "Hint", });
+          internal_static_com_taoeaten_et_protobuf_Et1001_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+          internal_static_com_taoeaten_et_protobuf_Et1001_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et1001_descriptor,
+              new java.lang.String[] { "Username", "Password", });
+          internal_static_com_taoeaten_et_protobuf_Et1001R_descriptor =
+            getDescriptor().getMessageTypes().get(4);
+          internal_static_com_taoeaten_et_protobuf_Et1001R_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et1001R_descriptor,
+              new java.lang.String[] { "Response", });
+          internal_static_com_taoeaten_et_protobuf_Et1002_descriptor =
+            getDescriptor().getMessageTypes().get(5);
+          internal_static_com_taoeaten_et_protobuf_Et1002_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et1002_descriptor,
+              new java.lang.String[] { "UserId", });
+          internal_static_com_taoeaten_et_protobuf_Et1002R_descriptor =
+            getDescriptor().getMessageTypes().get(6);
+          internal_static_com_taoeaten_et_protobuf_Et1002R_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et1002R_descriptor,
+              new java.lang.String[] { "Response", });
+          internal_static_com_taoeaten_et_protobuf_Et2001_descriptor =
+            getDescriptor().getMessageTypes().get(7);
+          internal_static_com_taoeaten_et_protobuf_Et2001_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et2001_descriptor,
+              new java.lang.String[] { });
+          internal_static_com_taoeaten_et_protobuf_Et2001R_descriptor =
+            getDescriptor().getMessageTypes().get(8);
+          internal_static_com_taoeaten_et_protobuf_Et2001R_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et2001R_descriptor,
+              new java.lang.String[] { "Response", "Rooms", });
+          internal_static_com_taoeaten_et_protobuf_Et3001_descriptor =
+            getDescriptor().getMessageTypes().get(9);
+          internal_static_com_taoeaten_et_protobuf_Et3001_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et3001_descriptor,
+              new java.lang.String[] { "UserId", "RoomId", });
+          internal_static_com_taoeaten_et_protobuf_Et3001R_descriptor =
+            getDescriptor().getMessageTypes().get(10);
+          internal_static_com_taoeaten_et_protobuf_Et3001R_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et3001R_descriptor,
+              new java.lang.String[] { "Response", });
+          internal_static_com_taoeaten_et_protobuf_Et3002_descriptor =
+            getDescriptor().getMessageTypes().get(11);
+          internal_static_com_taoeaten_et_protobuf_Et3002_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et3002_descriptor,
+              new java.lang.String[] { "UserId", "RoomId", });
+          internal_static_com_taoeaten_et_protobuf_Et3002R_descriptor =
+            getDescriptor().getMessageTypes().get(12);
+          internal_static_com_taoeaten_et_protobuf_Et3002R_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et3002R_descriptor,
+              new java.lang.String[] { "Response", });
+          internal_static_com_taoeaten_et_protobuf_Et3003_descriptor =
+            getDescriptor().getMessageTypes().get(13);
+          internal_static_com_taoeaten_et_protobuf_Et3003_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et3003_descriptor,
+              new java.lang.String[] { "UserId", "RoomId", });
+          internal_static_com_taoeaten_et_protobuf_Et3003R_descriptor =
+            getDescriptor().getMessageTypes().get(14);
+          internal_static_com_taoeaten_et_protobuf_Et3003R_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et3003R_descriptor,
+              new java.lang.String[] { "Response", });
+          internal_static_com_taoeaten_et_protobuf_Et3004_descriptor =
+            getDescriptor().getMessageTypes().get(15);
+          internal_static_com_taoeaten_et_protobuf_Et3004_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et3004_descriptor,
+              new java.lang.String[] { "UserId", "RoomId", });
+          internal_static_com_taoeaten_et_protobuf_Et3004R_descriptor =
+            getDescriptor().getMessageTypes().get(16);
+          internal_static_com_taoeaten_et_protobuf_Et3004R_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_Et3004R_descriptor,
+              new java.lang.String[] { "Response", });
+          internal_static_com_taoeaten_et_protobuf_EtMessage_descriptor =
+            getDescriptor().getMessageTypes().get(17);
+          internal_static_com_taoeaten_et_protobuf_EtMessage_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_EtMessage_descriptor,
+              new java.lang.String[] { "Type", "Et1001", "Et1002", "Et2001", "Et3001", "Et3002", "Et3003", "Et3004", });
+          internal_static_com_taoeaten_et_protobuf_EtMessageR_descriptor =
+            getDescriptor().getMessageTypes().get(18);
+          internal_static_com_taoeaten_et_protobuf_EtMessageR_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_com_taoeaten_et_protobuf_EtMessageR_descriptor,
+              new java.lang.String[] { "Type", "Et1001R", "Et1002R", "Et2001R", "Et3001R", "Et3002R", "Et3003R", "Et3004R", });
           return null;
         }
       };

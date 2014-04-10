@@ -44,7 +44,7 @@ public class Main {
 				 * protobuf codec
 				 */
 				pipeline.addLast("frameDecoder", new ProtobufVarint32FrameDecoder());  
-				pipeline.addLast("protobufDecoder", new ProtobufDecoder(CommandProtobuf.Command.getDefaultInstance()));  
+				pipeline.addLast("protobufDecoder", new ProtobufDecoder(CommandProtobuf.EtMessage.getDefaultInstance()));  
 				pipeline.addLast("frameEncoder", new ProtobufVarint32LengthFieldPrepender());  
 				pipeline.addLast("protobufEncoder", new ProtobufEncoder());  
                 

@@ -12,8 +12,10 @@ import org.jboss.netty.channel.ChannelFutureListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.taoeaten.et.core.domain.CommandConstant;
+import com.taoeaten.et.core.domain.Player;
+import com.taoeaten.et.protobuf.CmdPbTools;
 import com.taoeaten.et.protobuf.CommandProtobuf;
+import com.taoeaten.et.protobuf.CommandProtobuf.EtMessage;
 
 
 /**
@@ -25,9 +27,11 @@ public class GameClient {
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
+	private Player player = null;
+	
 	private Map<String , Channel> channels = new ConcurrentHashMap<String, Channel>();
 	
-	public int login(){
+	public int login(String username,String password){
 		this.logger.info("login");
 		if(!this.channels.containsKey("login")){
 			return -1;
@@ -36,10 +40,8 @@ public class GameClient {
 		/**
 		 * protobuf command
 		 */
-		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
-		builder.setCmdNo(CommandConstant.CMD_LOGIN);
-		builder.setUserName("taoeaten");
-		this.channels.get("login").write(builder.build());
+		EtMessage message = CmdPbTools.genLoginCmd(username, password);
+		this.channels.get("login").write(message);
 		return 0;
 	}
 	
@@ -52,10 +54,8 @@ public class GameClient {
 		/**
 		 * protobuf command
 		 */
-		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
-		builder.setCmdNo(CommandConstant.CMD_LOGOUT);
-		builder.setUserName("taoeaten");
-		ChannelFuture future = this.channels.get("login").write(builder.build());
+		EtMessage message = CmdPbTools.genLogoutCmd(this.player.getId());
+		ChannelFuture future = this.channels.get("login").write(message);
 		future.addListener(new ChannelFutureListener() {
 			public void operationComplete(ChannelFuture future) throws Exception {
 				GameClient.this.channels.remove("login");
@@ -72,11 +72,8 @@ public class GameClient {
 		/**
 		 * protobuf command
 		 */
-		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
-		builder.setCmdNo(CommandConstant.CMD_JOINROOM);
-		builder.setUserName("taoeaten");
-		builder.setRoomNo(roomNo);
-		this.channels.get("login").write(builder.build());
+		EtMessage message = CmdPbTools.genJoinRoomCmd(this.player.getId(),roomNo);
+		this.channels.get("login").write(message);
 		return 0;
 	}
 	
@@ -88,11 +85,34 @@ public class GameClient {
 		/**
 		 * protobuf command
 		 */
-		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
-		builder.setCmdNo(CommandConstant.CMD_LEAVEROOM);
-		builder.setUserName("taoeaten");
-		builder.setRoomNo(roomNo);
-		this.channels.get("login").write(builder.build());
+		EtMessage message = CmdPbTools.genLeaveRoomCmd(this.player.getId(),roomNo);
+		this.channels.get("login").write(message);
+		return 0;
+	}
+	
+	public int ready(int roomNo){
+		if(!this.channels.containsKey("login")){
+			return -1;
+		}
+		
+		/**
+		 * protobuf command
+		 */
+		EtMessage message = CmdPbTools.genReadyCmd(this.player.getId(),roomNo);
+		this.channels.get("login").write(message);
+		return 0;
+	}
+	
+	public int start(int roomNo){
+		if(!this.channels.containsKey("login")){
+			return -1;
+		}
+		
+		/**
+		 * protobuf command
+		 */
+		EtMessage message = CmdPbTools.genStartCmd(this.player.getId(),roomNo);
+		this.channels.get("login").write(message);
 		return 0;
 	}
 	
@@ -104,10 +124,8 @@ public class GameClient {
 		/**
 		 * protobuf command
 		 */
-		CommandProtobuf.Command.Builder builder = CommandProtobuf.Command.newBuilder();
-		builder.setCmdNo(CommandConstant.CMD_ROOMLIST);
-		builder.setUserName("taoeaten");
-		this.channels.get("login").write(builder.build());
+		EtMessage message = CmdPbTools.genRoomlistCmd();
+		this.channels.get("login").write(message);
 		return 0;
 	}
 	
@@ -118,6 +136,14 @@ public class GameClient {
 	 */
 	public void addChannel(String address, Channel channel){
 		this.channels.put(address, channel);
+	}
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
 	}
 	
 }

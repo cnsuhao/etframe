@@ -2,15 +2,157 @@ package com.taoeaten.et.protobuf;
 
 option java_package = "com.taoeaten.et.protobuf";  
 option java_outer_classname = "CommandProtobuf";  
+/*-----------------------------------------------------------------------------------*/
 
-message Command{  
-	required int32 cmdNo = 1;
-	required string userName = 2;
-	optional int32 roomNo = 3;
-	optional int32 userReady = 4;
-	repeated Room rooms = 5;
-} 
-
- message Room{
-     required int32 roomId = 1;
+/**
+* domain
+*/
+enum PlayerStatus{
+	OFFLINE = 1;
+	ONLINE = 2;
+	INROOM = 3;
+	PLAYING = 4;
 }
+
+enum RoomStatus{
+	WAIT = 1;
+	FULL = 2;
+	READY = 3;
+	GAMING = 4;
+}
+
+message Player{
+	required int32 id = 1;
+	required string name = 2;
+	optional string password = 3;
+	optional PlayerStatus status = 4;
+}
+
+message Room{
+	required int32 id = 1;
+	required string name = 2;
+	required RoomStatus status = 3;
+	repeated Player players = 4;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+/**
+*message type
+*/
+enum EtMessageType{
+	Tet1001 = 1;
+	Tet1002 = 2;
+	Tet2001 = 3;
+	Tet3001 = 4;
+	Tet3002 = 5;
+	Tet3003 = 6;
+	Tet3004 = 7;
+}
+/**
+*response message type
+*/
+enum EtMessageRType{
+	Tet1001R = 1;
+	Tet1002R = 2;
+	Tet2001R = 3;
+	Tet3001R = 4;
+	Tet3002R = 5;
+	Tet3003R = 6;
+	Tet3004R = 7;
+}
+
+enum EtResponseStatus{
+	SUCCESS = 1;
+	FAILED = 2;
+}
+
+message EtResponse{
+	required EtResponseStatus status = 1;
+	optional string hint = 2;
+}
+
+/**
+* ETABCDR-(A:module,BCD:cmdno,R:response)
+*/
+//login
+message Et1001{
+	required string username = 1;
+	required string password = 2;
+}
+message Et1001R{
+	required EtResponse response = 1;
+}
+//logout
+message Et1002{
+	required int32 userId = 1;
+}
+message Et1002R{
+	required EtResponse response = 1;
+}
+//get room list
+message Et2001{
+}
+message Et2001R{
+	required EtResponse response = 1;
+	repeated  Room rooms = 2;
+}
+//join the room
+message Et3001{
+	required int32 userId = 1;
+	required int32 roomId = 2;
+}
+message Et3001R{
+	required EtResponse response = 1;
+}
+//leave the room
+message Et3002{
+	required int32 userId = 1;
+	required int32 roomId = 2;
+}
+message Et3002R{
+	required EtResponse response = 1;
+}
+//ready
+message Et3003{
+	required int32 userId = 1;
+	required int32 roomId = 2;
+}
+message Et3003R{
+	required EtResponse response = 1;
+}
+//start the game
+message Et3004{
+	required int32 userId = 1;
+	required int32 roomId = 2;
+}
+message Et3004R{
+	required EtResponse response = 1;
+}
+
+
+/**
+*
+*/
+message EtMessage{
+	required EtMessageType type = 1;
+	optional Et1001 et1001 = 2;
+	optional Et1002 et1002 = 3;
+	optional Et2001 et2001 = 4;
+	optional Et3001 et3001 = 5;
+	optional Et3002 et3002 = 6;
+	optional Et3003 et3003 = 7;
+	optional Et3004 et3004 = 8;
+}
+message EtMessageR{
+	required EtMessageRType type = 1;
+	optional Et1001R et1001R = 2;
+	optional Et1002R et1002R = 3;
+	optional Et2001R et2001R = 4;
+	optional Et3001R et3001R = 5;
+	optional Et3002R et3002R = 6;
+	optional Et3003R et3003R = 7;
+	optional Et3004R et3004R = 8;
+}
+/*-----------------------------------------------------------------------------------*/
+

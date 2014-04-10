@@ -18,7 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.taoeaten.et.core.domain.CommandConstant;
-import com.taoeaten.et.protobuf.CommandProtobuf.Command;
+import com.taoeaten.et.protobuf.CommandProtobuf.EtMessage;
 import com.taoeaten.et.server.business.GameWorker;
 
 /**
@@ -48,9 +48,9 @@ public class GameHandler extends SimpleChannelHandler{
 		/**
 		 * protobuf 
 		 */
-		Command cmd = (Command) e.getMessage();
-		this.logger.info("message received - " + cmd.toString());
-		GameWorker worker = new GameWorker(e.getChannel(), cmd);
+		EtMessage message = (EtMessage) e.getMessage();
+		this.logger.info("message received - " + message.toString());
+		GameWorker worker = new GameWorker(e.getChannel(), message);
 		this.executors.execute(worker);
 	}
 

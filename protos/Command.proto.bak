@@ -1,0 +1,56 @@
+package com.taoeaten.et.protobuf;
+
+option java_package = "com.taoeaten.et.protobuf";  
+option java_outer_classname = "CommandProtobuf";  
+
+/**
+*login & logout
+*/
+message LogActionCommand{
+	required int32 cmdNo = 1;
+	required string username = 2;
+	optional string password = 3;
+}
+
+/**
+*hall action
+* roomlist & roominfo
+*/
+message HallActionCommand{
+	required int32 cmdNo = 1;
+	required int32 userId = 2;
+	repeated Room rooms = 3;
+}
+message Room{
+     required int32 roomId = 1;
+     required string roomName = 2;
+	 repeated User users = 3;
+}
+message User{
+     required int32 userId = 1;
+     required string username = 2;
+     required int32 userStatus = 3;
+}
+
+
+/**
+* room action
+* join & leave & ready
+*/
+message RoomActionCommand{
+	required int32 cmdNo = 1;
+	required int32 userId = 2;
+	required int32 roomId = 3;
+}
+ 
+/**
+* game action
+* start & play & quit
+*/
+ message GameActionCommand{
+ 	required int32 cmdNo = 1;
+	required int32 userId = 2;
+	required int32 roomId = 3;
+	optional int32 action = 4;
+ }
+

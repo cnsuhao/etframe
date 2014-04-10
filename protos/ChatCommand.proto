@@ -1,0 +1,17 @@
+package com.taoeaten.et.protobuf;
+
+option java_package = "com.taoeaten.et.protobuf";  
+option java_outer_classname = "ChatCommandProtobuf";  
+
+/**
+*
+*/
+message FriendCommand{
+}
+
+message ChatCommand{  
+	required int32 fromUser = 1;
+	required int32 toUser = 2;
+	required string content = 3;
+} 
+
